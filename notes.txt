@@ -1,0 +1,10 @@
+Hey look at this:
+
+https://www.geeksforgeeks.org/css/how-to-make-responsive-navbar-menu-in-css/
+
+Cool Navbar without Javascript (I think it'll be nice)
+Advantages:
+    Single list
+
+
+Also: Implement path offset system
