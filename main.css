@@ -5,7 +5,9 @@
 }
 
 :root {
-    --nav-height: 75px;
+    --nav-height: 50px;
+    --nav-search-height: 1.5rem;
+
     --content-width: min(90vw, 1200px);
     --content-margin: 50px;
     --content-padding: 30px;
@@ -35,6 +37,7 @@ nav section {
     align-items: center;
 
     width: var(--content-width);
+    height: var(--nav-height);
     margin-inline: auto;
 
 }
@@ -60,6 +63,7 @@ nav a {
 }
 
 #nav-search {
+    height: var(--nav-search-height);
     margin-left: 10px;
 }
 
@@ -67,8 +71,11 @@ nav a {
     display: none;
 }
 
-@media screen and (max-width: 980px /*MAX-MOBILE*/) {
-    nav input {
+@media screen and (max-width: 500px /*MAX-MOBILE*/) {
+    * {
+        --nav-gap: 1rem;
+    }
+    #nav-toggle {
         display: block;
         z-index: 5;
         margin-left: auto;
@@ -78,7 +85,7 @@ nav a {
         position: fixed;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(24, 48, 109, 0.9);
+        background-color: var(--color-dark1);
         top: 0;
         right: -100%;
         z-index: 1;
@@ -90,9 +97,9 @@ nav a {
         flex-direction: column;
         z-index: 2;
         gap: 10px;
-        right: -50%;
+        right: -100%;
         position: fixed;
-        top: var(--nav-height);
+        top: calc(2*var(--nav-gap) + var(--nav-search-height) + var(--nav-height));
 
         border-right: 5px solid blue;
     }
@@ -102,11 +109,22 @@ nav a {
         padding: 0;
         padding-right: 10px;
     }
-    nav input:checked ~ #nav-menu {
+    #nav-search {
+        transition: right 0.25s;
+        z-index: 2;
+        right: -100%;
+        top: calc(var(--nav-gap) + var(--nav-height));
+        position: fixed;
+    }
+
+    #nav-toggle:checked ~ #nav-menu {
         right: calc((100vw - var(--content-width)) / 2);
     }
-    nav input:checked ~ #nav-barrier {
+    #nav-toggle:checked ~ #nav-barrier {
         right: 0;
+    }
+    #nav-toggle:checked ~ #nav-search {
+        right: calc((100vw - var(--content-width)) / 2);
     }
 }
 
