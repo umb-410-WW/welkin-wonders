@@ -9,47 +9,58 @@
     --content-width: min(90vw, 1200px);
     --content-margin: 50px;
     --content-padding: 30px;
+
+    --color-light1: #ffffff;
+    --color-dark1: #251b66;
 }
 
 
 
 /* Header Items */
 
-header {
+nav {
     display: border-box;
     position: fixed;
     z-index: 1;
     top: 0;
     width: 100vw;
     height: max-content;
-    background-color: aqua;
+    background-color: var(--color-dark1);
 }
 
-header section {
+nav section {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
     width: var(--content-width);
     margin-inline: auto;
 
 }
 
-header a {
-    color: aliceblue;
-    display: block;
-    /* background-color: aliceblue; */
-    padding: 10px;
+nav a {
+    color: var(--color-light1);
+    /* display: block; */
+    text-decoration: none;
+}
+
+#nav-toggle {
+    display: none;
 }
 
 #nav-menu {
+    flex-grow: 1;
     display: flex;
+    justify-content: center;
     margin-left: auto;
     /* max-width: var(--content-width); */
     flex-direction: row;
+    gap: 15px;
 }
 
-header input {
-    display: none;
+#nav-search {
+    margin-left: 10px;
 }
 
 #nav-barrier {
@@ -57,7 +68,7 @@ header input {
 }
 
 @media screen and (max-width: 980px /*MAX-MOBILE*/) {
-    header input {
+    nav input {
         display: block;
         z-index: 5;
         margin-left: auto;
@@ -91,10 +102,10 @@ header input {
         padding: 0;
         padding-right: 10px;
     }
-    header input:checked ~ #nav-menu {
+    nav input:checked ~ #nav-menu {
         right: calc((100vw - var(--content-width)) / 2);
     }
-    header input:checked ~ #nav-barrier {
+    nav input:checked ~ #nav-barrier {
         right: 0;
     }
 }
@@ -108,13 +119,13 @@ header input {
     padding-top: var(--content-padding);
     padding-bottom: var(--content-padding);
     overflow: hidden;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     min-height: 100vh;
-    margin-inline: auto;
+    /* margin-inline: auto;
     background-color: rgba(127, 255, 212, 0.178);
     backdrop-filter: blur(2px);
     border: solid 2px;
-    border-color: white rgb(173, 173, 173) rgb(173, 173, 173) white;
+    border-color: white rgb(173, 173, 173) rgb(173, 173, 173) white; */
     
 }
 
