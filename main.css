@@ -7,13 +7,17 @@
 :root {
     --nav-height: 50px;
     --nav-search-height: 1.5rem;
+    --footer-height: 100px;
 
     --content-width: min(90vw, 1200px);
-    --content-margin: 50px;
+    --content-margin: 25px;
     --content-padding: 30px;
 
-    --color-light1: #ffffff;
-    --color-dark1: #251b66;
+    --color-light-1: #ffffff;
+    --color-light-2: #dbb7e1;
+    --color-dark-1: #251b66;
+
+    background-color: var(--color-light-2);
 }
 
 
@@ -27,7 +31,7 @@ nav {
     top: 0;
     width: 100vw;
     height: max-content;
-    background-color: var(--color-dark1);
+    background-color: var(--color-dark-1);
 }
 
 nav section {
@@ -43,9 +47,13 @@ nav section {
 }
 
 nav a {
-    color: var(--color-light1);
+    color: var(--color-light-2);
     /* display: block; */
     text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--color-light-1);
 }
 
 #nav-toggle {
@@ -64,7 +72,17 @@ nav a {
 
 #nav-search {
     height: var(--nav-search-height);
-    margin-left: 10px;
+    background-color: var(--color-light-2);
+    color: var(--color-dark-1);
+    border: none;
+    padding-inline: 10px;
+}
+#nav-search:focus {
+    border: none;
+    outline: none;
+}
+#nav-search::placeholder {
+    color: var(--color-dark-1);
 }
 
 #nav-barrier {
@@ -85,7 +103,7 @@ nav a {
         position: fixed;
         width: 100vw;
         height: 100vh;
-        background-color: var(--color-dark1);
+        background-color: var(--color-dark-1);
         top: 0;
         right: -100%;
         z-index: 1;
@@ -132,13 +150,14 @@ nav a {
 
 #content-strip {
     max-width: var(--content-width);
-    margin-top: calc(var(--nav-height) + 25px);
+    margin-top: calc(var(--nav-height) + var(--content-margin));
     margin-bottom: var(--content-margin);
+    margin-inline: auto;
     padding-top: var(--content-padding);
     padding-bottom: var(--content-padding);
     overflow: hidden;
     /* border-radius: 25px; */
-    min-height: 100vh;
+    min-height: calc(100dvh - (var(--nav-height) + var(--content-margin) * 2 + var(--footer-height)));
     /* margin-inline: auto;
     background-color: rgba(127, 255, 212, 0.178);
     backdrop-filter: blur(2px);
@@ -148,21 +167,21 @@ nav a {
 }
 
 body {
-    background-image: url('Untitled.jpg');
     background-size: 500px;
 }
 
 footer {
-    height: 100px;
+    height: var(--footer-height);
     width: 100vw;
 
-    background-color: rgb(0, 183, 255);
+    background-color: var(--color-dark-1);
 }
 
 footer div {
     width: var(--content-width);
     margin-inline: auto;
     padding-top: 15px;
+    color: var(--color-light-2);
 }
 
 footer p {

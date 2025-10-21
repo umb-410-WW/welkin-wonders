@@ -1,9 +1,8 @@
 
 let navItems = [
-    ["Dream Collection", "index.html"],
-    ["Characters", "index.html"],
-    ["Gallery", "index.html"],
-    ["Cast", "index.html"]
+    ["Shop", "index.html"],
+    ["About", "index.html"],
+    ["Contact Us", "index.html"]
 ];
 
 function formatNavButton(list) {
