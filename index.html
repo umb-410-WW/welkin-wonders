@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Insert Title Here</title>
-        
-        <link rel=stylesheet href="/main.css">
-        <link rel=stylesheet href="/css/index.css">
-        <script type="text/javascript" src="/js/navbar.js" defer></script>
-        <script type="text/javascript" src="/main.js" defer></script>
-    </head>
-    <body onload="main();">
-    
-        <nav>
-            <section>
-                <h1>Logo</h1>
-                <input id='nav-toggle' type="checkbox">
-                <label id="nav-barrier"for="nav-toggle"></label>
-                <div id='nav-menu'></div>
-                <input id='nav-search' type="text" placeholder="Search">
-            </section>
-        </nav>
-        
-        <div id='content-strip'>
-            <h1>SHOP</h1>
-            <h2>Shop Content</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welkin Wonders!</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Potential font(?) -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Could add a crystal image here maybe for tab icon(?) -->
+</head>
+<body>
+    <header>
+        <!-- Banner -->
+        <div class="banner"> 
+            <p>Placeholder Banner Text</p>
         </div>
-        
-        <footer>
-            <div>
-                <p>Copyright Information Here.</p>
-            </div>
-        </footer>
-        
-    </body>
+    </header>
+
+    <!-- Navigation Bar-->  
+    <nav>
+        <div class="logo">
+            <img src="#" alt="Logo">
+            <h2>Welkin<br>Wonders</h2>
+        </div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>           
+        <a href="#contact">Contact Us</a>
+        <a href="#readings">Readings</a> 
+        <a href="#shop">Shop</a>     
+     </nav>
+
+    <!-- Search Bar (may eventually have PHP file for handling?)-->
+    <section id="search">
+        <h1>Search</h1>
+        <form id="search-form" action="non-existent-file.php" method="GET">
+            <input type="text" name="search" placeholder="Browse our amazing products...">
+            <button type="submit">Go</button>
+        </form>
+    </section>
+
+    <!-- Footer Area -->
+     <footer>
+        <p>Placeholder footer text</p>
+     </footer>
+</body>
 </html>
