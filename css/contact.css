@@ -1,7 +1,6 @@
 * {
   --padding-vertical: 50px;
 }
-
 section {
   padding-top: var(--padding-vertical);
   padding-bottom: var(--padding-vertical);
@@ -9,8 +8,7 @@ section {
   margin-inline: auto;
 }
 
-h1,
-p {
+h1, p {
   text-align: center;
   color: var(--clr-light-a0);
 }
@@ -22,19 +20,19 @@ iframe {
   border-radius: 1rem;
   background-color: var(--clr-primary-a50);
 }
-
-#genie-icon {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 64px;
-  height: 64px;
-  z-index: 1000;
-  cursor: pointer;
+#genie-icon{
+  position: fixed !important;
+  right: 16px !important;
+  bottom: 16px !important;
+  width: 56px !important;
+  height: 56px !important;
+  z-index: 2147483647 !important;
+  display: block !important;
+  overflow: hidden !important;
+}
+#genie-icon img{
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
 }
 
-#genie-icon img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
