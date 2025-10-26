@@ -1,8 +1,29 @@
 * {
-    --padding-vertical: 50px;
+  --padding-vertical: 50px;
 }
-/* ——— Genie chat bubble ——— */
-#chat-bubble{
+
+section {
+  padding-top: var(--padding-vertical);
+  padding-bottom: var(--padding-vertical);
+  width: min(750px, 90vw);
+  margin-inline: auto;
+}
+
+h1,
+p {
+  text-align: center;
+  color: var(--clr-light-a0);
+}
+
+iframe {
+  width: 100%;
+  min-height: 75vh;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--clr-primary-a50);
+}
+
+#chat-bubble {
   position: fixed;
   right: 24px;
   bottom: 24px;
@@ -10,88 +31,110 @@
   height: 72px;
   border-radius: 999px;
   background: #fff;
-  box-shadow: 0 10px 24px rgba(0,0,0,.22);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
   display: grid;
   place-items: center;
   cursor: pointer;
-  z-index: 1000;                 
-  transition: transform .15s ease, box-shadow .2s ease;
+  z-index: 1000;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  overflow: hidden;
 }
-#chat-bubble:hover{ transform: translateY(-2px); }
-#chat-bubble:active{ transform: translateY(0); }
 
-#chat-bubble img{
-  width: 64px;
-  height: auto;
+#chat-bubble:hover {
+  transform: translateY(-2px);
+}
+#chat-bubble:active {
+  transform: translateY(0);
+}
+
+#chat-bubble img {
+  width: 64px !important;
+  height: auto !important;
   display: block;
-  pointer-events: none;         
+  pointer-events: none;
+  max-width: none !important;
 }
 
-/* ——— Chat panel ——— */
-#chat-box{
+#chat-box {
   position: fixed;
   right: 24px;
-  bottom: 110px;                 
+  bottom: 110px;
   width: min(360px, 92vw);
   max-height: min(70vh, 640px);
   background: #fff;
   color: var(--clr-light-a0, #222);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 14px 36px rgba(0,0,0,.28);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
   z-index: 1001;
   display: flex;
   flex-direction: column;
 }
 
-.hidden{ display:none; }       
+.hidden {
+  display: none !important;
+}
 
-#chat-box h1{
+#chat-box h1 {
   margin: 0;
   padding: 12px 16px 4px;
   font-size: 1.05rem;
   color: var(--clr-light-a0, #222);
-  text-align: left;             
+  text-align: left;
 }
 
-#chat-box p{
+#chat-box p {
   margin: 0 16px 8px;
-  text-align: left;            
+  text-align: left;
   color: var(--clr-light-a0, #333);
 }
 
-#chat-box iframe{
-  width: 100%;
-  height: 400px;                 
-  min-height: 300px;             
-  border: 0;
-  border-radius: 0;
+#chat-box iframe {
+  width: 100% !important;
+  height: 420px !important;
+  min-height: 320px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
   background: var(--clr-primary-a50, #f4f0ff);
 }
 
-/* Small screens: lift panel a bit & shrink bubble */
-@media (max-width: 480px){
-  #chat-bubble{ width: 60px; height: 60px; }
-  #chat-bubble img{ width: 52px; }
-  #chat-box{ bottom: 96px; }
-}
-section {
-    padding-top: var(--padding-vertical);
-    padding-bottom: var(--padding-vertical);
-    width: min(750px, 90vw);    
-    margin-inline: auto;
-}
-
-h1, p {
-    text-align: center;
-    color: var(--clr-light-a0);
+@media (max-width: 480px) {
+  #chat-bubble {
+    width: 60px;
+    height: 60px;
+  }
+  #chat-bubble img {
+    width: 52px;
+  }
+  #chat-box {
+    bottom: 96px;
+  }
 }
 
-iframe {
-    width: 100%;
-    min-height: 75vh;
-    border: none;
-    border-radius: 1rem;
-    background-color: var(--clr-primary-a50);
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
 
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22), 0 0 0 0 rgba(255, 204, 0, 0);
+  }
+  50% {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22), 0 0 24px 6px rgba(255, 204, 0, 0.25);
+  }
+}
+
+#chat-bubble.animated {
+  animation: floaty 4s ease-in-out infinite, glow 3.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #chat-bubble.animated {
+    animation: none;
+  }
 }
