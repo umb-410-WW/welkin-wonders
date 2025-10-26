@@ -9,7 +9,8 @@ section {
   margin-inline: auto;
 }
 
-h1, p {
+h1,
+p {
   text-align: center;
   color: var(--clr-light-a0);
 }
@@ -22,26 +23,18 @@ iframe {
   background-color: var(--clr-primary-a50);
 }
 
-/* Tiny floating genie */
-#genie-float {
+#genie-icon {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   z-index: 1000;
-  animation: floaty 4s ease-in-out infinite;
+  cursor: pointer;
 }
 
-#genie-float img {
+#genie-icon img {
   width: 100%;
   height: auto;
   display: block;
 }
-
-/* gentle floating animation */
-@keyframes floaty {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
