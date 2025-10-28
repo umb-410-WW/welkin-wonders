@@ -1,7 +1,10 @@
 /* Constants */
 :root {
     /* Banner Variables */
-    --placeholder-banner-height: 100px;
+    --placeholder-banner-height: 80vh;
+    --banner-border-radius: 50px;
+    --welcome-banner-height: 80%;
+    --welcome-banner-width: 60%;
 
     /* Navigation Bar Variables */
     --placeholder-nav-bar-height: 100px;
@@ -17,7 +20,7 @@
     /* Search Bar Variables */
     --placeholder-search-height: 550px;
     --form-border-radius: 50px;
-    --search-bar-width: 90%;
+    --search-bar-width: 300px;
     --search-bar-max-width: 700px;
     --search-bar-horizontal-padding: 25px;
     --search-bar-vertical-padding: 1rem;
@@ -29,7 +32,7 @@
     --search-bar-font-size: 1rem;
 
     /* Footer Variables */
-    --placeholder-footer-height: 100px;
+    --placeholder-footer-height: 30px;
 
     /** Base colors */
     --clr-dark-a0: #000000;
@@ -106,6 +109,17 @@ body {
     color: var(--clr-light-a0)
 }
 
+.welcome-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-surface-tonal-a10);
+  border-radius: var(--banner-border-radius);
+  border: 3px solid var(--clr-surface-tonal-a30);
+  width: var(--welcome-banner-width);
+  height: var(--welcome-banner-height);
+}
+
 /* Navigation Bar Styling */
 nav {
     position: sticky;
@@ -146,12 +160,9 @@ nav a:hover {
 
 /* Search Section Styling */
 #search {
-    height: var(--placeholder-search-height);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--clr-surface-tonal-a0);
     color: var(--clr-light-a0)
 }
 
@@ -165,7 +176,7 @@ nav a:hover {
     border-radius: var(--form-border-radius);
     width: var(--search-bar-width);
     max-width: var(--search-bar-max-width);
-    background-color: var(--clr-surface-tonal-a10);
+    background-color: var(--clr-surface-tonal-a20);
 }
 
 #search-form:focus-within {
@@ -214,7 +225,6 @@ footer {
     justify-content: center;
     background-color: var(--clr-surface-tonal-a10);
     color: var(--clr-light-a0);
-
 }
 
 /* ========== ABOUT PAGE STYLING ========== */
