@@ -157,7 +157,10 @@ nav a:hover {
 
 #search-form {
     display: flex;
-    padding: var(--search-bar-vertical-padding) var(--search-bar-horizontal-padding) var(--search-bar-vertical-padding) var(--search-bar-horizontal-padding);
+    padding: var(--search-bar-vertical-padding) 
+             var(--search-bar-horizontal-padding) 
+             var(--search-bar-vertical-padding) 
+             var(--search-bar-horizontal-padding);
     border: 2px solid var(--clr-surface-tonal-a20);
     border-radius: var(--form-border-radius);
     width: var(--search-bar-width);
@@ -211,4 +214,5 @@ footer {
     justify-content: center;
     background-color: var(--clr-surface-tonal-a10);
     color: var(--clr-light-a0);
+
 }
