@@ -1,0 +1,22 @@
+#products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#products div {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.product-desc {
+    position: absolute;
+    top: 250px;
+    z-index: 1;
+    background-color: aqua;
+}
