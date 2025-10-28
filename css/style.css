@@ -216,3 +216,88 @@ footer {
     color: var(--clr-light-a0);
 
 }
+
+/* ========== ABOUT PAGE STYLING ========== */
+#about {
+  min-height: calc(100vh - var(--placeholder-nav-bar-height) - var(--placeholder-footer-height) - var(--placeholder-banner-height));
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+  background-color: var(--clr-surface-tonal-a0);
+}
+
+/* Letter container */
+.letter {
+  position: relative;
+  width: min(900px, 92vw);
+  background: var(--clr-surface-a10);
+  border: 1px solid var(--clr-surface-a30);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+/* Decorative flap for envelope effect */
+.letter-flap {
+  height: 80px;
+  background: linear-gradient(135deg, var(--clr-primary-a20), var(--clr-primary-a40));
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 50% 100%, 0 65%);
+  border-bottom: 1px solid var(--clr-surface-a30);
+}
+
+/* Inner content */
+.letter-inner {
+  padding: 32px min(48px, 6vw);
+  color: var(--clr-light-a0);
+}
+
+.letter-inner h1 {
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--clr-primary-a50);
+}
+
+.letter-inner p {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--clr-surface-a50);
+}
+
+/* Optional gallery section */
+.letter-gallery {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.letter-gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--clr-surface-a30);
+}
+
+/* Subtle shadow */
+.letter-shadow {
+  position: absolute;
+  inset: auto 20px -14px 20px;
+  height: 28px;
+  filter: blur(18px);
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.35), transparent 60%);
+  pointer-events: none;
+}
+
+/* Highlight active nav link */
+nav a.active {
+  background-color: var(--clr-surface-tonal-a20);
+  border-radius: var(--nav-button-border-radius);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .letter-flap { height: 64px; }
+  .letter-gallery { grid-template-columns: 1fr 1fr; }
+}
