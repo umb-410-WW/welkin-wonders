@@ -97,6 +97,7 @@ body {
     margin: 0;
     font-size: 16px;
     background-color: var(--clr-surface-tonal-a0);
+    min-width: min-content;
 }
 
 /* Banner Styling */
@@ -106,23 +107,20 @@ body {
     justify-content: center;
     height: var(--placeholder-banner-height);
     background-color: var(--clr-surface-tonal-a20);
-    color: var(--clr-light-a0)
+    color: var(--clr-light-a0);
 }
 
 .welcome-banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--clr-surface-tonal-a10);
-  border-radius: var(--banner-border-radius);
-  border: 3px solid var(--clr-surface-tonal-a30);
-  max-width: var(--welcome-banner-width);
   height: auto;
+  max-width: 2000px;
+  max-height: 800px;
 }
 
 /* Navigation Bar Styling */
 nav {
     position: sticky;
+    margin: 0;
     top: 0;
     z-index: var(--nav-z-index);
     height: var(--placeholder-nav-bar-height);
