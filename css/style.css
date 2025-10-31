@@ -3,8 +3,7 @@
     /* Banner Variables */
     --placeholder-banner-height: 80vh;
     --banner-border-radius: 50px;
-    --welcome-banner-height: 80%;
-    --welcome-banner-width: 60%;
+    --welcome-banner-width: 100%;
 
     /* Navigation Bar Variables */
     --placeholder-nav-bar-height: 100px;
@@ -98,7 +97,6 @@ body {
     margin: 0;
     font-size: 16px;
     background-color: var(--clr-surface-tonal-a0);
-    min-width: min-content;
 }
 
 /* Banner Styling */
@@ -118,8 +116,8 @@ body {
   background-color: var(--clr-surface-tonal-a10);
   border-radius: var(--banner-border-radius);
   border: 3px solid var(--clr-surface-tonal-a30);
-  width: var(--welcome-banner-width);
-  height: var(--welcome-banner-height);
+  max-width: var(--welcome-banner-width);
+  height: auto;
 }
 
 /* Navigation Bar Styling */
@@ -208,7 +206,6 @@ nav {
     color: var(--clr-light-a0);
 }
     
-
 #search-form input[type="text"]:focus {
     outline: none;
     caret-color: var(--clr-light-a0)
