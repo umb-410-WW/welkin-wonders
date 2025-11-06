@@ -105,16 +105,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: var(--placeholder-banner-height);
+    width: 100%;
     background-color: var(--clr-surface-tonal-a20);
     color: var(--clr-light-a0);
+    padding: 0; 
 }
-
 .welcome-banner {
-  background-color: var(--clr-surface-tonal-a10);
-  height: auto;
-  max-width: 2000px;
-  max-height: 800px;
+    width: 100%;
+    height: auto;
+    background-color: var(--clr-surface-tonal-a10);
+    max-width: none;  
+    max-height: none; 
+    display: block;
 }
 
 /* Navigation Bar Styling */
