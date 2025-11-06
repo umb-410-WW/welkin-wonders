@@ -1,10 +1,12 @@
 
 #product-strip {
     --product-padding: 50px;
-    background-color: aqua;
+    /* background-color: aqua; */
     width: min(90vw, 1000px);
     margin-inline: auto;
-    padding: var(--product-padding);
+    padding-top: var(--product-padding);
+    padding-bottom: var(--product-padding);
+    color: white;
 }
 
 #product-top {
@@ -15,28 +17,52 @@
 
 #product-img {
     background-color: white;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: var(--img-radius);
 }
 
 #product-top,
 #product-desc,
-#product-review {
+#products {
     margin-bottom: var(--product-padding);
 }
 
 
-#product-review {
-    background-color: bisque;
+/* #product-review {
+    background-color: var(--clr-primary-a50);
+    color: var(--clr-dark-a0);
+    padding: 10px;
+} */
+
+#product-review-subdiv {
+    /* border: 1px red solid; */
+    /* margin: 10px; */
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .review {
-    background-color: aquamarine;
+    background-color: var(--clr-primary-a10);
+    /* border: 1px blue solid; */
+    padding-inline: 10px;
+    border-radius: 10px;
+    color: var(--clr-dark-a0);
 }
 
 .review div {
     display: flex;
     flex-direction: row;
     gap: 10px;
+}
+
+
+
+
+
+#products {
+    flex-wrap: nowrap;
+    overflow: scroll;
+    overflow-x: scroll;
 }
