@@ -9,6 +9,11 @@
     color: white;
 }
 
+/* h2 {
+    width: min(90vw, 1000px);
+    margin-inline: auto;
+    } */
+
 #product-top {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -26,6 +31,18 @@
 #product-desc,
 #products {
     margin-bottom: var(--product-padding);
+}
+
+
+#product-cart {
+    background-color: aqua;
+}
+
+
+
+
+#product-desc {
+    line-height: 2rem;
 }
 
 
@@ -58,11 +75,18 @@
 }
 
 
+#product-more {
+    width: min(90vw, 1000px);
+    margin-inline: auto;
+}
 
-
+#product-more h2 {
+    color: var(--clr-light-a0);
+}
 
 #products {
     flex-wrap: nowrap;
     overflow: scroll;
     overflow-x: scroll;
+    width: 100%;
 }
