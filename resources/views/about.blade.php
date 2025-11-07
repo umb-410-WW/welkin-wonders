@@ -4,7 +4,7 @@
     <header>
         <!-- Banner -->
         <div class="banner">
-            <img class="welcome-banner" src="../welkin-wonders/img/assets/banner_purple.png" alt="Welkin Wonders Banner" width="auto" height="auto">
+            <img class="welcome-banner" src="{{ asset('assets/img/banner_purple.png')}}" alt="Welkin Wonders Banner" width="auto" height="auto">
         </div>
     </header>
 @endsection

@@ -1,4 +1,5 @@
 @extends('layouts.ww-layouts.app')
+@section('title', 'Contact Us')
 @section('style')
     @vite(['resources/css/contact.css'])
 @endsection
@@ -15,4 +16,3 @@
         <p>Placeholder footer text</p>
     </footer>
 @endsection
-

@@ -83,6 +83,15 @@
     --clr-info-a10: #4077d1;
     --clr-info-a20: #92b2e5;
 }
+/* Fade In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
 
 /* Universal Styling */
 *,
@@ -236,6 +245,12 @@ footer {
     justify-content: center;
     background-color: var(--clr-surface-tonal-a10);
     color: var(--clr-light-a0);
+}
+
+/* Plays fade in animation when navigating between pages */
+section,
+footer {
+    animation: fadeIn 1s ease-in both;
 }
 
 /* ========== ABOUT PAGE STYLING ========== */

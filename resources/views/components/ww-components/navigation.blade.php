@@ -1,13 +1,13 @@
 <nav>
     <div class="logo-and-links">
         <div class="logo">
-            <img src="crystal_ball_round.png" alt="Logo" width="100" height="100">
+            <img src="{{asset('assets/img/crystal_ball_round.png')}}" alt="Logo" width="100" height="100">
             <h2>Welkin<br>Wonders</h2>
         </div>
-        <a class="nav-button" href="{{ route('about') }}" >Home</a>
+        <a class="nav-button" href="{{ route('about') }}">Home</a>
         <a class="nav-button" href="{{ route('contact') }}">Contact Us</a>
-        <a class="nav-button" href="#readings">Readings</a>
-        <a class="nav-button" href="#shop">Shop</a>
+        <a class="nav-button" href="#">Readings</a>
+        <a class="nav-button" href="#">Shop</a>
     </div>
     <div class="search-and-login">
         <div id="search">
