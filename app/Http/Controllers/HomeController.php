@@ -19,6 +19,19 @@ class HomeController extends Controller
         return view('contact');
     }
 
+    // Directs the user to the Readings page
+    public function readings() : view
+    {
+        return view('readings');
+    }
+
+    // Directs the user to the Shop page
+    public function shop(): view
+    {
+        return view('shop');
+    }
+
+
     // Directs the user to the admin dashboard when called
     public function admin() : view
     {

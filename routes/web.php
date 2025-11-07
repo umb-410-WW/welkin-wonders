@@ -22,9 +22,10 @@ require __DIR__.'/auth.php';
 
 // Controls where the user is directed upon login
 Route::controller(HomeController::class)->group(function () {
-
     Route::get('/about', 'about')->name('about'); // Goes to the About Us page
     Route::get('/contact', 'contact')->name('contact'); // Goes to the Contact Us page
+    Route::get('/readings', 'readings')->name('readings'); // Goes to the Readings page
+    Route::get('/shop', 'shop')->name('shop'); // Goes to the Shop page
     Route::get('/admin/dashboard', 'admin')->middleware(['auth', 'admin'])->name('admin.dashboard'); // Goes to the admin dashboard & uses the Admin middleware to check that the user is an admin
 });
 

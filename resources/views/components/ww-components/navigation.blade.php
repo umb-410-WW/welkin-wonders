@@ -6,8 +6,8 @@
         </div>
         <a class="nav-button" href="{{ route('about') }}">Home</a>
         <a class="nav-button" href="{{ route('contact') }}">Contact Us</a>
-        <a class="nav-button" href="#">Readings</a>
-        <a class="nav-button" href="#">Shop</a>
+        <a class="nav-button" href="{{ route('readings') }}">Readings</a>
+        <a class="nav-button" href="{{ route('shop') }}">Shop</a>
     </div>
     <div class="search-and-login">
         <div id="search">
