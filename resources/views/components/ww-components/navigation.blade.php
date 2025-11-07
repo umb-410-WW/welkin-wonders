@@ -4,8 +4,8 @@
             <img src="crystal_ball_round.png" alt="Logo" width="100" height="100">
             <h2>Welkin<br>Wonders</h2>
         </div>
-        <a class="nav-button" href="index.html">Home</a>
-        <a class="nav-button" href="contact.html">Contact Us</a>
+        <a class="nav-button" href="{{ route('about') }}" >Home</a>
+        <a class="nav-button" href="{{ route('contact') }}">Contact Us</a>
         <a class="nav-button" href="#readings">Readings</a>
         <a class="nav-button" href="#shop">Shop</a>
     </div>
