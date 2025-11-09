@@ -2,11 +2,11 @@
 
 | List No. | Product Backlog Item | Sprint | Status |
 |:--:|:----------------------|:-------:|:-------:|
-| 1 | Design homepage wireframe and layout | 1 | Done |
+| 1 | Design homepage layout | 1 | Done |
 | 2 | Implement homepage banner and search bar | 1 | Done |
 | 3 | Create navigation bar and footer components | 1 | Done |
-| 4 | Develop three homepage themes (simple, dark, forest) | 1 | Done |
-| 5 | Add 5-star rating system for products | 1 | Done |
+| 4 | Develop three homepage themes (light, dark, forest) | 1 | Done |
+| 5 | Create 5-star rating system image for products | 1 | Done|
 | 6 | Implement login system to save user preferences | 1–3 | In Progress |
 | 7 | Build Shop Page layout with product cards | 2 | Done |
 | 8 | Create Admin Page structure in HTML | 2 | Done |
