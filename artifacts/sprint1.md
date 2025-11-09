@@ -8,7 +8,7 @@ Week 1 – Initial development phase
 
 ## Tasks Completed
 | List No. | Description | Status |
-|:--:|:----------------|:-------:|:------:|
+|:--:|:----------------|:-------:|
 | 1 | Designed homepage wireframe and layout | Done |
 | 2 | Implemented homepage banner and search bar | Done |
 | 3 | Created navigation bar and footer components | Done |
