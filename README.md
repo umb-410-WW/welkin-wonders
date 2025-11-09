@@ -17,7 +17,7 @@ It is a metaphysical-themed online store.
 ---
 ### Thea
 1. Designed the Genie icon that links to the Contact page.  
-2. Generated and edited genie and crystal imagery using DALL·E and personal designs via Paint.Net; all images were verified as commercially usable under current OpenAI licensing.  
+2. Generated and edited genie and crystal imagery using DALL-E and personal designs via Paint.Net; all images were verified as commercially usable under current OpenAI licensing.  
 3. Assisted with frontend cleanup, ensuring responsive layouts and consistent image rendering.  
 4. Contributed to the artifacts folder organization and Sprint documentation in the GitHub repository.
 
