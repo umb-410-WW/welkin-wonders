@@ -11,7 +11,7 @@ It is a metaphysical-themed online store.
 ### Current Features
 - Homepage with multiple visual themes  
 - Navigation bar and footer across all pages  
-- Product shop page and admin dashboard (under development)  
+- Product shop page and admin dashboard (in progress)  
 - User authentication and database integration (in progress)
 
 ---
