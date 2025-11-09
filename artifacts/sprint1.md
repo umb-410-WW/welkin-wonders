@@ -1,20 +1,14 @@
-# Sprint 1 – frontend prototype
+# Sprint 1 – Create Necessary Frontend Pages/UI Elements
 
-**Goal:**  
-Design and implement the essential frontend structure and visuals for the client website; a prototype.
+**Sprint Goal:**  
+Create necessary frontend pages and UI elements.
 
-**Duration:**  
-Week 1 – Initial development phase
-
-## Tasks Completed
-| List No. | Description | Status |
-|:--:|:----------------|:-------:|
-| 1 | Designed homepage wireframe and layout | Done |
-| 2 | Implemented homepage banner and search bar | Done |
-| 3 | Created navigation bar and footer components | Done |
-| 4 | Developed a homepage theme based on three ideas (light, dark, forest) | Done |
-| 5 | Designed images for 5-star rating system for products | Done |
-| 19 | Added content for About Us and Contact pages | Done |
+| Feature | Responsible | Start Date | End Date | Duration | Status | Comments |
+|:--|:--|:--:|:--:|:--:|:--:|:--|
+| Navigation + Search Bar for Products | Liam | 10/21/2025 | 10/23/2025 | 2 Classes | Complete | Navigation + Search Bar Completed. Search bar will need eventual backend integration for product search functionality. |
+| Banner Design + Website Icons | Thea | 10/21/2025 | 10/23/2025 | 2 Classes | Complete | Created a banner for the home page to welcome customers into the shop. Also created additional assets for the website (e.g. Genie for the Contact Us button). |
+| Contact Page (Frontend Layout + Embedded Google Form) | Jonathan | 10/21/2025 | 10/23/2025 | 2 Classes | Complete | The contact page has been completed, allowing customers to fill out a Google form to contact the company owners. In the future, this may need to be adjusted (e.g. change receiving email address or add additional fields to the form) based on client needs. |
+| About Us Page Implementation | Naim | 10/21/2025 | 10/23/2025 | 2 Classes | Complete | The About Us page has been completed, which will serve to tell customers about Welkin Wonders’ values, history, etc. |
 
 ## Contributors
 - Thea – Homepage layout, image placement  
@@ -25,4 +19,3 @@ Week 1 – Initial development phase
 **Artifacts:**  
 - '/artifacts/sprint1/sprint1_board.jpg'  
 - '/artifacts/sprint1/sprint1.md
-- 'artifacts/sprint1/img/*'
