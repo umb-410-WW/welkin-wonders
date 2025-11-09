@@ -1,24 +1,97 @@
-# Product Backlog – Welkin Wonders
+# ~~~~~ WELKIN WONDERS PRODUCT BACKLOG (ORDERED MOST → LEAST IMPORTANT) ~~~~~
 
-| List No. | Product Backlog Item | Sprint | Status |
-|:--:|:----------------------|:-------:|:-------:|
-| 1 | Design homepage layout | 1 | Done |
-| 2 | Implement homepage banner and search bar | 1 | Done |
-| 3 | Create navigation bar and footer components | 1 | Done |
-| 4 | Develop three homepage themes (light, dark, forest) | 1 | Done |
-| 5 | Create 5-star rating system image for products | 1 | Done|
-| 6 | Implement login system to save user preferences | 1–3 | In Progress |
-| 7 | Build Shop Page layout with product cards | 2 | Done |
-| 8 | Create Admin Page structure in HTML | 2 | Done |
-| 9 | Transfer Admin Page to Laravel framework | 3 | In Progress |
-| 10 | Debug Laravel routes and Blade templates | 3 | In Progress |
-| 11 | Implement database schema and migrations | 3 | In Progress |
-| 12 | Add user authentication functionality | 3 | In Progress |
-| 13 | Create checkout form (HTML + validation) | 3 | Planned |
-| 14 | Implement product review section (5 stars + comments) | 3 | Planned |
-| 15 | Integrate Laravel backend with frontend components | 3 | In Progress |
-| 16 | Add cloud hosting configuration (Docker or server) | 3 | Planned |
-| 17 | Deploy project on CS server or hosting platform | Future | Planned |
-| 18 | Conduct UI/UX refinements based on client feedback | 2–3 | Done |
-| 19 | Add content for About Us and Contact pages | 1–2 | Done |
-| 20 | Create Git repository documentation and artifacts folder | 3 | Done |
+## Homepage (1)
+- [ ] About Us Section – Backstory, Mottos (1.2)
+- [ ] Description of Shop (1.3)
+- [ ] Include buttons to other pages within homepage content section (1.4)
+- [ ] Contact Genie (1.5)
+- [ ] Curtain Animation (1.6)
+- [x] Homepage Banner (1.1)
+
+---
+
+## Contact Page (2)
+- [x] Embedded Google Form (2.1)
+
+---
+
+## Navigation Bar (3)
+- [x] Navigation Bar Frontend Design (3.1)
+- [ ] Search Bar for Products (3.2)
+
+---
+
+## Color Scheme (4)
+- [x] Overall Color Scheme and Visual Theme
+
+---
+
+## Shop Page (5)
+- [x] Product Card Frontend Template (5.1.1)
+- [ ] Product Cards Backend Integration (5.1.2)
+- [ ] Randomizer Button to Choose Crystal for Customer (5.2)
+
+---
+
+## Individual Product Page (6)
+- [x] Generic Product Page Frontend Template (6.1)
+- [x] Review Section to Display Customer Ratings (6.2)
+- [ ] Review Form Underneath Review Section (6.3)
+- [ ] Integration with Laravel Backend to Display Database Products (6.4)
+
+---
+
+## Shopping Cart / Checkout Page (7)
+- [ ] Frontend for Checkout Page (7.1)
+- [ ] Add Product Price for Total (7.2)
+- [ ] Laravel Embedded Payment System (Stripe) (7.3)
+
+---
+
+## FAQ Page (8)
+- [ ] FAQ Page Content and Layout
+
+---
+
+## Admin Page (9)
+- [x] Admin Page Frontend (9.1)
+- [ ] Admin Page Sales Tracker (9.2)
+- [ ] Add/Edit/Remove Product Functionality (9.3)
+
+---
+
+## User Authentication (10)
+- [x] Login / Registration Pages (10.1)
+- [x] Distinguish Between Customers and Administrators (10.2)
+
+---
+
+## Database (MySQL) (11)
+- [x] Users Table (11.1)
+- [ ] Products Table (11.2)
+- [ ] Carts Table (11.3)
+- [ ] Orders Table (11.4)
+- [ ] Other Tables as Needed (11.5)
+
+---
+
+## Website Deployment (12)
+- [x] Communication with Tom Regarding CS Server (12.1)
+- [ ] Discuss with Sachi Regarding Preferred Hosting Platform (12.2)
+
+---
+
+# ~~~~~ COMPLETED BACKLOG ITEMS ~~~~~
+- [x] Homepage Banner (1.1)
+- [x] Embedded Google Form (2.1)
+- [x] Navigation Bar Frontend Design (3.1)
+- [x] Color Scheme (4)
+- [x] Product Card Frontend (5.1.1)
+- [x] Generic Product Page Frontend Template (6.1)
+- [x] Review Section to Display Customer Ratings (6.2)
+- [x] Admin Page Frontend (9.1)
+- [x] User Authentication (10)
+- [x] Login / Registration Pages (10.1)
+- [x] Distinguish Between Customers and Administrators (10.2)
+- [x] Users Table in Database (11.1)
+- [x] Communication with Tom Regarding CS Server (12.1)
