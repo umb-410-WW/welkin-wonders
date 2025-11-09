@@ -1,8 +1,25 @@
-# Read Me
+# Welkin Wonders
+
+Welkin Wonders is an e-commerce website designed as part of the UMass Boston CS 410 course.  
+It is a metaphysical-themed online store.
+
+## Project Overview
+- **Frameworks:** HTML, CSS, JavaScript, PHP, Laravel  
+- **Team Members:** Liam, Jonathan, Naim, Thea  
+- **Client Goal:** Provide a visually engaging storefront that combines an aesthetic front-end with a functional Laravel back-end.
+
+### Current Features
+- Homepage with multiple visual themes  
+- Navigation bar and footer across all pages  
+- Product shop page and admin dashboard (under development)  
+- User authentication and database integration (in progress)
+
+---
 ## Thea
-1. Genie icon which brings you into the contact page
-2. Curtain animation before opens to the website (stars and maybe moons on the curtains. Jonathan is thinking of adding text in center)
-3. The genie and crystal images are generated from D.A.L.L.E, which at the moment is allowed to generate images for commercial purposes
+1. Designed the **Genie icon** that links to the Contact page.  
+2. Generated and edited **genie and crystal imagery** using DALL·E and personal designs via Paint.Net; all images were verified as commercially usable under current OpenAI licensing.  
+3. Assisted with **frontend cleanup**, ensuring responsive layouts and consistent image rendering.  
+4. Contributed to the **artifacts folder** organization and Sprint documentation in the GitHub repository.
 
 ## Liam
 ## Jonathan
