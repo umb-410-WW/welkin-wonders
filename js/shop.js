@@ -5,126 +5,70 @@ let products = [
     {
         name: "Test0",
         price: "$9999.99",
-        img: "genie_ai_2.png",
+        img: "img/shop_img/dark_gray_black_stone_labradorite.jpg",
         desc: "Description Text Here",
         page: "URL"
     },
     {
         name: "Test1",
         price: "$0.99",
-        img: "gem_ai.jpg",
+        img: "img/shop_img/rose_quartz_sachi.jpg",
         desc: "Description Text Here",
         page: "URL ALSO"
     },
     {
         name: "Test0",
         price: "$9999.99",
-        img: "genie_ai_2.png",
+        img: "img/shop_img/dark_gray_black_stone_labradorite.jpg",
         desc: "Description Text Here",
         page: "URL"
     },
     {
         name: "Test1",
         price: "$0.99",
-        img: "gem_ai.jpg",
+        img: "img/shop_img/rose_quartz_sachi.jpg",
         desc: "Description Text Here",
         page: "URL ALSO"
     },
     {
         name: "Test0",
         price: "$9999.99",
-        img: "genie_ai_2.png",
+        img: "img/shop_img/dark_gray_black_stone_labradorite.jpg",
         desc: "Description Text Here",
         page: "URL"
     },
     {
         name: "Test1",
         price: "$0.99",
-        img: "gem_ai.jpg",
+        img: "img/shop_img/rose_quartz_sachi.jpg",
         desc: "Description Text Here",
         page: "URL ALSO"
     },
     {
         name: "Test0",
         price: "$9999.99",
-        img: "genie_ai_2.png",
+        img: "img/shop_img/dark_gray_black_stone_labradorite.jpg",
         desc: "Description Text Here",
         page: "URL"
     },
     {
         name: "Test1",
         price: "$0.99",
-        img: "gem_ai.jpg",
+        img: "img/shop_img/rose_quartz_sachi.jpg",
         desc: "Description Text Here",
         page: "URL ALSO"
     },
     {
         name: "Test0",
         price: "$9999.99",
-        img: "genie_ai_2.png",
+        img: "img/shop_img/dark_gray_black_stone_labradorite.jpg",
         desc: "Description Text Here",
         page: "URL"
     },
     {
         name: "Test1",
         price: "$0.99",
-        img: "gem_ai.jpg",
-        desc: "Description Text Here",
-        page: "URL ALSO"
-    },
-    {
-        name: "Test0",
-        price: "$9999.99",
-        img: "genie_ai_2.png",
-        desc: "Description Text Here",
-        page: "URL"
-    },
-    {
-        name: "Test1",
-        price: "$0.99",
-        img: "gem_ai.jpg",
-        desc: "Description Text Here",
-        page: "URL ALSO"
-    },
-    {
-        name: "Test0",
-        price: "$9999.99",
-        img: "genie_ai_2.png",
-        desc: "Description Text Here",
-        page: "URL"
-    },
-    {
-        name: "Test1",
-        price: "$0.99",
-        img: "gem_ai.jpg",
-        desc: "Description Text Here",
-        page: "URL ALSO"
-    },
-    {
-        name: "Test0",
-        price: "$9999.99",
-        img: "genie_ai_2.png",
-        desc: "Description Text Here",
-        page: "URL"
-    },
-    {
-        name: "Test1",
-        price: "$0.99",
-        img: "gem_ai.jpg",
-        desc: "Description Text Here",
-        page: "URL ALSO"
-    },
-    {
-        name: "Test0",
-        price: "$9999.99",
-        img: "genie_ai_2.png",
-        desc: "Description Text Here",
-        page: "URL"
-    },
-    {
-        name: "Test1",
-        price: "$0.99",
-        img: "gem_ai.jpg",
+        img: "img/shop_img/rose_quartz_sachi.jpg",
         desc: "Description Text Here",
         page: "URL ALSO"
     }
