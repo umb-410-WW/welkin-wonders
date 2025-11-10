@@ -1,7 +1,7 @@
 @extends('layouts.ww-layouts.app')
 @section('title', 'Contact Us')
 @section('style')
-    @vite(['resources/css/contact.css'])
+    <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
 @endsection
 @section('content')
     <section>

@@ -1,7 +1,7 @@
 @extends('layouts.ww-layouts.app')
 @section('title', 'Shop')
 @section('style')
-    @vite(['resources/css/shop.css'])
+    <link rel="stylesheet" href="{{ asset('assets/css/shop.css') }}">
 @endsection
 @section('content')
     <section>
