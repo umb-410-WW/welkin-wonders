@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+@extends('layouts.ww-layouts.app')
+@section('title', 'Admin Dashboard')
+@section('content')
     <h1>Admin Dashboard!</h1>
-
+    <a href="{{ route('products.create') }}">Create a product</a>
     <form method="POST" action="{{ route('logout') }}">
         @csrf
 
         <input type="submit" value="Logout">
     </form>
-</body>
+@endsection
+
