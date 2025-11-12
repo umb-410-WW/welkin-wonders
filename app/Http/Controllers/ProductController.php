@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controllers\Middleware;
 
 class ProductController extends Controller
@@ -61,6 +62,13 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
+        $user = Auth::user();
+
+        // Only let customers see active products (Administrators can still see inactive products)
+        if (!$product->is_active && (!$user || !($user->user_type === 'admin'))) {
+            return redirect('/');
+        }
+
         return view('products.show', compact('product'));
     }
 
@@ -78,16 +86,17 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         $data = $request->validate([
-            'name' => 'required',
-            'slug' => 'required|string|unique:products,slug,' . $product->id,
+            'name' => 'string|max:255',
+            'slug' => 'string|unique:products,slug,' . $product->id,
             'description' => 'nullable|string',
-            'stock_quantity' => 'required|integer',
+            'price' => 'numeric',
+            'stock_quantity' => 'integer',
             'is_active' => 'boolean',
         ]);
 
         $product->update($data);
 
-        return redirect()->route('products.index')->with('success', 'Product updated successfully.');
+        return redirect()->route('admin.dashboard')->with('success', 'Product updated successfully.');
     }
 
     /**
@@ -96,6 +105,6 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         $product->delete();
-        return redirect()->route('products.index')->with('success', 'Product deleted successfully.');
+        return redirect()->route('admin.dashboard')->with('success', 'Product deleted successfully.');
     }
 }
