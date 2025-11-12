@@ -1,5 +1,5 @@
 {{-- This file will display each individual product --}}
-@extends('layouts.ww-layouts.app')
+@extends('layouts.ww_layouts.app')
 @section('title', $product->name)
 @section('style')
     <link rel="stylesheet" href="{{ asset('assets/css/product-page.css') }}"

@@ -1,4 +1,4 @@
-@extends('layouts.ww-layouts.app')
+@extends('layouts.ww_layouts.app')
 @section('title', 'Admin Dashboard')
 @section('content')
     <h1>Admin Dashboard!</h1>

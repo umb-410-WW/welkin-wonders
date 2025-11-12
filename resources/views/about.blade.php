@@ -1,4 +1,4 @@
-@extends('layouts.ww-layouts.app')
+@extends('layouts.ww_layouts.app')
 @section('title', 'About Us')
 @section('banner')
     <header>

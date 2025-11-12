@@ -14,8 +14,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::with('images')->get();
-        return view('products.index', compact('products'));
+        // All products
+        $products = Product::all();
+
+        // Pass all the products to the shop page
+        return view('shop', compact('products'));
     }
 
     /**
@@ -38,8 +41,10 @@ class ProductController extends Controller
             'description' => 'nullable|string',
             'price' => 'required|numeric',
             'stock_quantity' => 'required|integer',
-            'is_active' => 'boolean',
         ]);
+
+        // Convert the checkbox to a boolean
+        $data['is_active'] = $request->has('is_active');
 
         // Create the Product
         $product = Product::create($data);

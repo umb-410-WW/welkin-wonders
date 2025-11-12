@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\ww-components;
+namespace App\View\Components\ww_components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -21,6 +21,6 @@ class Navigation extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.ww-components.navigation');
+        return view('components.ww_components.navigation');
     }
 }

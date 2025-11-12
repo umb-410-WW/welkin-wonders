@@ -1,9 +1,10 @@
 {{-- This file is the form that will be used to create new products --}}
-@extends('layouts.ww-layouts.app')
+@extends('layouts.ww_layouts.app')
 @section('title', 'Create Product')
 
 @section('content')
-    <form style="color: white; display: flex; flex-direction: column" action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+    <form style="color: white; display: flex; flex-direction: column" action="{{ route('products.store') }}"
+          method="POST" enctype="multipart/form-data">
         @csrf
         <label for="name">Product Name</label>
         <input type="text" name="name" id="name" class="form-control" required>

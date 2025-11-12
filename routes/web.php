@@ -29,7 +29,6 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/about', 'about')->name('about');
     Route::get('/contact', 'contact')->name('contact');
     Route::get('/readings', 'readings')->name('readings');
-    Route::get('/shop', 'shop')->name('shop');
 
     /* Routes only available to Administrators. Only Administrators should be able to:
     - View the admin dashboard
@@ -40,12 +39,7 @@ Route::controller(HomeController::class)->group(function () {
 });
 
 // Product Routes
-Route::resource('products', ProductController::class);
 Route::controller(ProductController::class)->group(function () {
-    // Routes available to all users
-    Route::get('/products', 'index')->name('products.index');
-    Route::get('/products/{product:slug}', 'show')->name('products.show');
-
     /* Routes only available to Administrators. Only Administrators should be able to:
     - Create new products
     - Store products
@@ -54,10 +48,15 @@ Route::controller(ProductController::class)->group(function () {
     - Delete products
     */
     Route::middleware(['auth', 'verified', 'admin'])->group(function () {
+        Route::get('/products', 'index')->name('products.index');
         Route::get('/products/create', 'create')->name('products.create');
         Route::post('/products', 'store')->name('products.store');
         Route::get('/products/{product:slug}/edit', 'edit')->name('products.edit');
         Route::put('/products/{product:slug}', 'update')->name('products.update');
         Route::delete('/products/{product:slug}', 'destroy')->name('products.destroy');
     });
+
+    // Routes available to all users
+    Route::get('/shop', 'index')->name('products.shop');
+    Route::get('/products/{product:slug}', 'show')->name('products.show');
 });

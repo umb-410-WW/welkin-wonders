@@ -12,7 +12,8 @@
 </head>
 <body>
     @yield('banner')
-    <x-ww-components.navigation></x-ww-components.navigation> <!-- Navigation bar -->
+    {{-- Display the navigation bar --}}
+    <x-ww_components.navigation></x-ww_components.navigation>
 
     @yield('content')
     @yield('scripts')
