@@ -44,7 +44,7 @@ class ProductController extends Controller
         ]);
 
         // Convert the checkbox to a boolean
-        $data['is_active'] = $request->has('is_active');
+        $data['is_active'] = $request->has('is_active'); 
 
         // Create the Product
         $product = Product::create($data);
