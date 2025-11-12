@@ -2,8 +2,6 @@
     --img-radius: 25px;
 }
 
-
-
 #products {
     display: flex;
     flex-direction: row;

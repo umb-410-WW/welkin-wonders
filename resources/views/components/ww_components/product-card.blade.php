@@ -1,4 +1,5 @@
 {{-- This is the main styling of a product card --}}
+@props(['product'])
 <div class="product-card">
     <div class="product-desc">
         <div class="product-title">

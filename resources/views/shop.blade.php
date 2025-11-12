@@ -7,12 +7,14 @@
     <section>
         <h1>Shop</h1>
         {{-- Display all of the product cards --}}
-        @forelse ($products as $product)
-            <x-ww_components.product-card :product="$product"></x-ww_components.product-card>
-        {{-- Display a message if there are no products in the database --}}
-        @empty
-            <p>No products are available at the moment. Stay tuned!</p>
-        @endforelse
+        <div id="products">
+            @forelse ($products as $product)
+                <x-ww_components.product-card :product="$product"></x-ww_components.product-card>
+                {{-- Display a message if there are no products in the database --}}
+            @empty
+                <p>No products are available at the moment. Stay tuned!</p>
+            @endforelse
+        </div>
     </section>
 
     <!-- Footer Area -->
