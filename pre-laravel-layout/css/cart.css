@@ -1,7 +1,32 @@
 /* Global Stuff +=- */
 
 
+#cart-strip {
+    width: min(1000px, 90vw);
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 /* -+= Header Stuff +=- */
+
+#cart-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#cart-header h1 {
+    flex-grow: 1;
+    color: var(--clr-light-a0);
+}
+
+#cart-header a {
+    padding: 25px;
+    background-color: aqua;
+    border-radius: 50px;
+}
 
 
 /* -+= Cart Items +=- */
