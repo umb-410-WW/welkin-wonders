@@ -6,7 +6,7 @@
     --welcome-banner-width: 100%;
 
     /* Navigation Bar Variables */
-    --placeholder-nav-bar-height: 100px;
+    --placeholder-nav-bar-height: 300px;
     --nav-z-index: 1000;
     --nav-min-gap: 30px;
     --nav-preferred-gap: 3vw;
@@ -101,21 +101,25 @@ body {
 }
 
 /* Banner Styling */
+/* Banner Styling */
 .banner {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-height: var(--placeholder-banner-height); 
+    overflow: hidden;                             
     background-color: var(--clr-surface-tonal-a20);
     color: var(--clr-light-a0);
     padding: 0; 
 }
+
 .welcome-banner {
     width: 100%;
     height: auto;
+    max-height: var(--placeholder-banner-height);  
+    object-fit: cover;                            
     background-color: var(--clr-surface-tonal-a10);
-    max-width: none;  
-    max-height: none; 
     display: block;
 }
 
@@ -325,3 +329,4 @@ nav a.active {
   .letter-flap { height: 64px; }
   .letter-gallery { grid-template-columns: 1fr 1fr; }
 }
+
