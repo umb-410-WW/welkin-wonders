@@ -7,6 +7,28 @@
     margin-inline: auto;
 }
 
+#shop-strip-header {
+    color: var(--clr-light-a0);
+    width: 100%;
+}
+
+#shop-strip-header h1, #shop-strip-header p {
+    width: 100%;
+    text-align: center;
+    margin-inline: auto;
+}
+
+#shop-strip-header a {
+    width: fit-content;
+    margin-inline: auto;
+}
+
+#shop-strip-header img {
+    width: min(100%, 250px);
+}
+
+
+
 #products {
     display: flex;
     flex-direction: row;
