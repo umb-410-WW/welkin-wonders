@@ -6,11 +6,7 @@
     --welcome-banner-width: 100%;
 
     /* Navigation Bar Variables */
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
-    --placeholder-nav-bar-height: 300px;
-========
     --placeholder-nav-bar-height: 100px;
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
     --nav-z-index: 1000;
     --nav-min-gap: 30px;
     --nav-preferred-gap: 3vw;
@@ -87,14 +83,13 @@
     --clr-info-a10: #4077d1;
     --clr-info-a20: #92b2e5;
 }
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
 
 /* Universal Styling */
-*, 
+*,
 *::before,
 *::after {
-    box-sizing: border-box; 
-========
+    box-sizing: border-box;
+}
 /* Fade In Animation */
 @keyframes fadeIn {
     0% {
@@ -110,7 +105,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
     font-family: 'Rubik', sans-serif;
 }
 
@@ -123,31 +117,25 @@ body {
 }
 
 /* Banner Styling */
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
-/* Banner Styling */
-========
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
 .banner {
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
     width: 100%;
-    max-height: var(--placeholder-banner-height); 
-    overflow: hidden;                             
+    max-height: var(--placeholder-banner-height);
+    overflow: hidden;
     background-color: var(--clr-surface-tonal-a20);
     color: var(--clr-light-a0);
-    padding: 0; 
+    padding: 0;
 }
 
 .welcome-banner {
     width: 100%;
     height: auto;
-    max-height: var(--placeholder-banner-height);  
-    object-fit: cover;                            
+    max-height: var(--placeholder-banner-height);
+    object-fit: cover;
     background-color: var(--clr-surface-tonal-a10);
     display: block;
-========
     height: var(--placeholder-banner-height);
     background-color: var(--clr-surface-tonal-a20);
     color: var(--clr-light-a0);
@@ -158,7 +146,6 @@ body {
     height: auto;
     max-width: 2000px;
     max-height: 800px;
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
 }
 
 /* Navigation Bar Styling */
@@ -178,15 +165,12 @@ nav {
 
 /* Items on the left of the nav bar */
 .logo-and-links {
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
   display: flex;
   align-items: center;
   gap: clamp(var(--nav-min-gap), var(--nav-preferred-gap), var(--nav-max-gap));
-========
     display: flex;
     align-items: center;
     gap: clamp(var(--nav-min-gap), var(--nav-preferred-gap), var(--nav-max-gap));
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
 }
 
 .logo {
@@ -199,17 +183,14 @@ nav {
 
 /* Items on the right of the nav bar */
 .search-and-login {
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 20px;
-========
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 20px;
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
 }
 
 .nav-button {
@@ -225,36 +206,30 @@ nav {
 }
 
 .login-button {
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
   background-color: var(--clr-primary-a0);
 }
 
 .login-button:hover {
   background-color: var(--clr-primary-a10);
-========
     background-color: var(--clr-primary-a0);
 }
 
 .login-button:hover {
     background-color: var(--clr-primary-a10);
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
 }
 
 /* Search Section Styling */
 #search-form {
     display: flex;
     align-items: center;
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
-    padding: var(--search-bar-vertical-padding) 
-             var(--search-bar-padding-right) 
-             var(--search-bar-vertical-padding) 
+    padding: var(--search-bar-vertical-padding)
+             var(--search-bar-padding-right)
+             var(--search-bar-vertical-padding)
              var(--search-bar-padding-left);
-========
     padding: var(--search-bar-vertical-padding)
     var(--search-bar-padding-right)
     var(--search-bar-vertical-padding)
     var(--search-bar-padding-left);
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
     border: 2px solid var(--clr-surface-tonal-a30);
     border-radius: var(--form-border-radius);
     width: var(--search-bar-width);
@@ -275,11 +250,7 @@ nav {
     background-color: transparent;
     color: var(--clr-light-a0);
 }
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
-    
-========
 
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
 #search-form input[type="text"]:focus {
     outline: none;
     caret-color: var(--clr-light-a0)
@@ -314,7 +285,6 @@ footer {
     color: var(--clr-light-a0);
 }
 
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
 /* ========== ABOUT PAGE STYLING ========== */
 #about {
   min-height: calc(100vh - var(--placeholder-nav-bar-height) - var(--placeholder-footer-height) - var(--placeholder-banner-height));
@@ -323,7 +293,6 @@ footer {
   place-items: center;
   padding: 40px 20px;
   background-color: var(--clr-surface-tonal-a0);
-========
 /* Plays fade in animation when navigating between pages */
 section,
 footer {
@@ -338,12 +307,10 @@ footer {
     place-items: center;
     padding: 40px 20px;
     background-color: var(--clr-surface-tonal-a0);
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
 }
 
 /* Letter container */
 .letter {
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
   position: relative;
   width: min(900px, 92vw);
   background: var(--clr-surface-a10);
@@ -351,7 +318,6 @@ footer {
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0,0,0,0.35);
-========
     position: relative;
     width: min(900px, 92vw);
     background: var(--clr-surface-a10);
@@ -359,27 +325,22 @@ footer {
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0,0,0,0.35);
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
 }
 
 /* Decorative flap for envelope effect */
 .letter-flap {
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
   height: 80px;
   background: linear-gradient(135deg, var(--clr-primary-a20), var(--clr-primary-a40));
   clip-path: polygon(0 0, 100% 0, 100% 65%, 50% 100%, 0 65%);
   border-bottom: 1px solid var(--clr-surface-a30);
-========
     height: 80px;
     background: linear-gradient(135deg, var(--clr-primary-a20), var(--clr-primary-a40));
     clip-path: polygon(0 0, 100% 0, 100% 65%, 50% 100%, 0 65%);
     border-bottom: 1px solid var(--clr-surface-a30);
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
 }
 
 /* Inner content */
 .letter-inner {
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
   padding: 32px min(48px, 6vw);
   color: var(--clr-light-a0);
 }
@@ -395,7 +356,6 @@ footer {
   margin: 0;
   line-height: 1.7;
   color: var(--clr-surface-a50);
-========
     padding: 32px min(48px, 6vw);
     color: var(--clr-light-a0);
 }
@@ -411,12 +371,10 @@ footer {
     margin: 0;
     line-height: 1.7;
     color: var(--clr-surface-a50);
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
 }
 
 /* Optional gallery section */
 .letter-gallery {
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -429,7 +387,6 @@ footer {
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid var(--clr-surface-a30);
-========
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -442,48 +399,38 @@ footer {
     object-fit: cover;
     border-radius: 10px;
     border: 1px solid var(--clr-surface-a30);
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
 }
 
 /* Subtle shadow */
 .letter-shadow {
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
   position: absolute;
   inset: auto 20px -14px 20px;
   height: 28px;
   filter: blur(18px);
   background: radial-gradient(ellipse at center, rgba(0,0,0,0.35), transparent 60%);
   pointer-events: none;
-========
     position: absolute;
     inset: auto 20px -14px 20px;
     height: 28px;
     filter: blur(18px);
     background: radial-gradient(ellipse at center, rgba(0,0,0,0.35), transparent 60%);
     pointer-events: none;
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
 }
 
 /* Highlight active nav link */
 nav a.active {
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
   background-color: var(--clr-surface-tonal-a20);
   border-radius: var(--nav-button-border-radius);
-========
     background-color: var(--clr-surface-tonal-a20);
     border-radius: var(--nav-button-border-radius);
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
 }
 
 /* Responsive adjustments */
 @media (max-width: 640px) {
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
   .letter-flap { height: 64px; }
   .letter-gallery { grid-template-columns: 1fr 1fr; }
 }
 
-========
     .letter-flap { height: 64px; }
     .letter-gallery { grid-template-columns: 1fr 1fr; }
 }
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css

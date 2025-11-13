@@ -2,26 +2,48 @@
     --img-radius: 25px;
 }
 
+#shop-strip {
+    width: min(1000px, 90vw);
+    margin-inline: auto;
+}
 
+#shop-strip-header {
+    color: var(--clr-light-a0);
+    width: 100%;
+}
+
+#shop-strip-header h1, #shop-strip-header p {
+    width: 100%;
+    text-align: center;
+    margin-inline: auto;
+}
+
+#shop-strip-header a {
+    width: fit-content;
+    margin-inline: auto;
+}
+
+#shop-strip-header img {
+    width: min(100%, 250px);
+}
 
 #products {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: center;
-    width: min(1000px, 90vw);
-    margin-inline: auto;
+    justify-content: space-between;
+    width: 100%;
 
     --card-height: 300px;
     --card-title-height: 50px;
 }
 
 .product-card {
-    flex-grow: 1;
     position: relative;
+    flex-basis: calc(33% - 10px);
     width: var(--card-height);
-    height: var(--card-height);
+    aspect-ratio: 4/3;
     overflow: hidden;
 
     background-size: cover;
@@ -53,7 +75,7 @@
 .product-desc {
     position: absolute;
     width: 100%;
-    height: var(--card-height);
+    height: 100%;
     top: calc(100% - var(--card-title-height));
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.582);

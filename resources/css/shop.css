@@ -2,14 +2,11 @@
     --img-radius: 25px;
 }
 
-<<<<<<<< HEAD:pre-laravel-layout/css/shop.css
 #shop-strip {
     width: min(1000px, 90vw);
     margin-inline: auto;
 }
 
-========
->>>>>>>> laravel-frontend-integration:resources/css/shop.css
 #products {
     display: flex;
     flex-direction: row;
