@@ -1,31 +1,82 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600">
-        {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification – Welkin Wonders</title>
 
-    @if (session('status') == 'verification-link-sent')
-        <div class="mb-4 font-medium text-sm text-green-600">
-            {{ __('A new verification link has been sent to the email address you provided during registration.') }}
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen w-full bg-[#0d0718] text-white overflow-x-hidden">
+
+    <!-- NAV BAR -->
+    <nav class="w-full px-8 py-4 flex items-center justify-between bg-[#1a1329] border-b border-[#2e2350] shadow-xl">
+
+        <div class="flex items-center gap-3">
+            <img src="/assets/img/crystal_ball_round.png" class="w-12 drop-shadow-lg">
+            <span class="text-2xl font-bold text-purple-300">Welkin Wonders</span>
         </div>
-    @endif
 
-    <div class="mt-4 flex items-center justify-between">
-        <form method="POST" action="{{ route('verification.send') }}">
-            @csrf
+        <div class="hidden md:flex gap-8 text-gray-300 text-lg">
+            <a href="/" class="hover:text-purple-300">Home</a>
+            <a href="/contact" class="hover:text-purple-300">Contact Us</a>
+            <a href="/readings" class="hover:text-purple-300">Readings</a>
+            <a href="/shop" class="hover:text-purple-300">Shop</a>
+        </div>
 
-            <div>
-                <x-primary-button>
-                    {{ __('Resend Verification Email') }}
-                </x-primary-button>
+        <div class="flex items-center gap-3">
+            <input type="text" placeholder="Browse our products..."
+                class="px-4 py-2 rounded-full bg-[#0f0a1a] border border-[#2e2350] text-sm text-gray-300 focus:ring-purple-500">
+            <button class="px-4 py-2 rounded-full bg-purple-600 hover:bg-purple-700 transition">Go</button>
+        </div>
+    </nav>
+
+    <!-- MAIN VERIFICATION CARD -->
+    <div class="flex justify-center items-center min-h-[85vh] px-4">
+
+        <div class="w-full max-w-md bg-[#1a1329] border border-[#2e2350]
+                    rounded-2xl shadow-2xl p-10">
+
+            <div class="text-center mb-6">
+                <h1 class="text-3xl font-bold text-purple-300">Verify Your Email</h1>
+                <p class="text-gray-400 mt-2">
+                    Thanks for signing up! Please check your inbox and click the verification link.
+                </p>
             </div>
-        </form>
 
-        <form method="POST" action="{{ route('logout') }}">
-            @csrf
+            <!-- Status Message -->
+            @if (session('status') == 'verification-link-sent')
+                <div class="mb-4 text-purple-300 text-center font-medium">
+                    A new verification link has been sent to your email.
+                </div>
+            @endif
 
-            <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                {{ __('Log Out') }}
-            </button>
-        </form>
+            <div class="mt-6 flex flex-col gap-4">
+
+                <!-- Resend Verification Email -->
+                <form method="POST" action="{{ route('verification.send') }}">
+                    @csrf
+
+                    <button type="submit"
+                        class="w-full py-3 bg-purple-600 hover:bg-purple-700 rounded-xl shadow-lg shadow-purple-900/40 transition font-semibold">
+                        Resend Verification Email
+                    </button>
+                </form>
+
+                <!-- Log Out -->
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit"
+                        class="w-full text-gray-400 hover:text-purple-300 underline transition text-sm">
+                        Log Out
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
     </div>
-</x-guest-layout>
+
+</body>
+</html>
