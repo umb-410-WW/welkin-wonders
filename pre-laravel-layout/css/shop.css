@@ -4,7 +4,10 @@
 
 #shop-strip {
     width: min(1000px, 90vw);
-    margin-inline: auto;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 #shop-strip-header {
@@ -35,7 +38,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: space-between;
     width: 100%;
 
     --card-height: 300px;
