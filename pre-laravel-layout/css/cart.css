@@ -1,10 +1,10 @@
-/* Global Stuff */
+/* Global Stuff +=- */
 
 
-/* Header Stuff */
+/* -+= Header Stuff +=- */
 
 
-/* Cart Items */
+/* -+= Cart Items +=- */
 
 #cart-items {
     width: 100%;
@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 25px;
 }
 
 .cart-item img {
@@ -34,14 +34,32 @@
 .product-counter {
     background-color: aquamarine;
     display: flex;
+    height: fit-content;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid black;
 }
 
+.product-counter * {
+    display: block;
+    height: 2rem;
+    aspect-ratio: 1;
+
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.product-counter *:nth-child(2) {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
 
 .cart-item-description {
     flex-grow: 1;
 }
 
 .cart-item-remove {
+    /* margin-right: 25px; */
     aspect-ratio: 1;
     text-align: center;
     font-size: 25px;
