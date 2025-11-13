@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecommerce Admin Dashboard — Dashboard</title>
+
+  <!-- Fonts & Chart.js -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    :root{
+      --bg:#0f172a;
+      --panel:#111827;
+      --panel-2:#0b1220;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --brand:#16a085;
+      --accent:#64748b;
+      --success:#22c55e;
+      --warn:#f59e0b;
+      --danger:#ef4444;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:linear-gradient(180deg,var(--bg),#0b1220);
+      color:var(--text);
+    }
+
+    /* Header */
+    header{
+      background:#1f2937;
+      padding:20px 16px;
+      text-align:center;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    header h1{
+      margin:0;
+      font-size:20px;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+
+    /* Sidebar */
+    .sidebar{
+      width:220px;
+      background:#111827;
+      position:fixed;
+      inset:64px auto 0 0;
+      height:calc(100vh - 64px);
+      overflow:auto;
+      border-right:1px solid #1f2937;
+    }
+    .sidebar a{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:14px 16px;
+      color:var(--text);
+      text-decoration:none;
+      border-left:3px solid transparent;
+      font-weight:500;
+      cursor:pointer;
+    }
+    .sidebar a:hover{
+      background:#0b1220;
+      border-left-color:var(--brand);
+    }
+    .sidebar a.active{
+      background:#0b1220;
+      border-left-color:var(--brand);
+    }
+
+    /* Main layout */
+    .main{
+      margin-left:220px;
+      padding:24px;
+      max-width:1400px;
+    }
+    .page-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:18px;
+    }
+    .breadcrumb{
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    /* Controls */
+    .controls{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .control{
+      background:#0b1220;
+      border:1px solid #1f2937;
+      border-radius:10px;
+      padding:8px 10px;
+      color:var(--text);
+    }
+    select.control{appearance:none}
+    .btn{
+      background:var(--brand);
+      border:none;
+      border-radius:10px;
+      color:white;
+      padding:8px 12px;
+      font-weight:600;
+      cursor:pointer;
+    }
+
+    /* Sections */
+    .section{display:none;}
+    .section.active{display:block;}
+
+    /* KPI cards */
+    .kpi-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:14px;
+      margin:14px 0 22px;
+    }
+    .kpi{
+      background:linear-gradient(180deg,var(--panel),#0b1220);
+      border:1px solid #1f2937;
+      border-radius:16px;
+      padding:16px;
+    }
+    .kpi .label{
+      font-size:12px;
+      color:var(--muted);
+    }
+    .kpi .value{
+      font-size:26px;
+      font-weight:700;
+      margin-top:6px;
+    }
+    .kpi .delta{
+      margin-top:6px;
+      font-size:12px;
+    }
+    .up{color:var(--success);}
+    .down{color:var(--danger);}
+
+    /* Panels & charts */
+    .panel{
+      background:linear-gradient(180deg,var(--panel),#0b1220);
+      border:1px solid #1f2937;
+      border-radius:16px;
+      padding:16px;
+      margin-bottom:16px;
+    }
+    .panel h3{
+      margin:0 0 8px;
+      font-size:14px;
+      color:#cbd5e1;
+    }
+    .panel small{color:var(--muted);}
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:4px;
+    }
+
+    /* Table */
+    .table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:13px;
+    }
+    .table th,
+    .table td{
+      padding:8px 6px;
+      border-bottom:1px solid #1f2937;
+      text-align:left;
+    }
+    .pill{
+      display:inline-block;
+      padding:2px 8px;
+      border-radius:999px;
+      border:1px solid #1f2937;
+      background:#0b1220;
+      color:#cbd5e1;
+      font-size:11px;
+    }
+
+    /* Responsive */
+    @media (max-width:1000px){
+      .kpi-grid{grid-template-columns:repeat(2,1fr);}
+      .grid-2{grid-template-columns:1fr;}
+    }
+    @media (max-width:640px){
+      .sidebar{
+        position:static;
+        width:100%;
+        height:auto;
+      }
+      .main{margin:0;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Admin • Dashboard</h1>
+  </header>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <a data-section="dashboard" class="active">Dashboard</a>
+    <a data-section="products">Products</a>
+    <a data-section="customers">Customers</a>
+    <a data-section="settings">Settings</a>
+    <a id="logoutBtn">Logout</a>
+  </nav>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- DASHBOARD (Analytics) -->
+    <section id="section-dashboard" class="section active">
+      <div class="page-head">
+        <div>
+          <div class="breadcrumb">Home / <span style="color:#cbd5e1">Dashboard</span></div>
+          <h2 style="margin:6px 0 0;font-size:22px">Overview</h2>
+        </div>
+        <div class="controls">
+          <select id="range" class="control">
+            <option value="7">Last 7 days</option>
+            <option value="30" selected>Last 30 days</option>
+            <option value="90">Last 90 days</option>
+            <option value="365">Year to date</option>
+          </select>
+          <button id="exportBtn" class="btn">Export CSV</button>
+        </div>
+      </div>
+
+      <!-- KPI cards -->
+      <section class="kpi-grid">
+        <div class="kpi">
+          <div class="label">Total sales</div>
+          <div id="kpi-sales" class="value">$0</div>
+          <div id="kpi-sales-delta" class="delta up">—</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Orders</div>
+          <div id="kpi-orders" class="value">0</div>
+          <div id="kpi-orders-delta" class="delta up">—</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Visitors</div>
+          <div id="kpi-visitors" class="value">0</div>
+          <div id="kpi-visitors-delta" class="delta up">—</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Conversion (visitors → customers)</div>
+          <div id="kpi-cr" class="value">0%</div>
+          <div id="kpi-cr-delta" class="delta up">—</div>
+        </div>
+      </section>
+
+      <!-- Sales over time -->
+      <section class="panel">
+        <h3>Sales over time <small id="windowLabel"></small></h3>
+        <canvas id="salesChart" height="120"></canvas>
+      </section>
+
+      <!-- Orders + Top products -->
+      <section class="grid-2">
+        <div class="panel">
+          <h3>Orders over time</h3>
+          <canvas id="ordersChart" height="120"></canvas>
+        </div>
+        <div class="panel">
+          <h3>Top products</h3>
+          <table class="table" id="topProductsTable">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Units</th>
+                <th>Revenue</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="section-products" class="section">
+      <div class="page-head">
+        <div>
+          <div class="breadcrumb">Home / <span style="color:#cbd5e1">Products</span></div>
+          <h2 style="margin:6px 0 0;font-size:22px">Products</h2>
+        </div>
+      </div>
+      <div class="panel">
+        <p style="color:var(--muted)">Products management page (hook to Laravel routes later).</p>
+      </div>
+    </section>
+
+    <!-- CUSTOMERS -->
+    <section id="section-customers" class="section">
+      <div class="page-head">
+        <div>
+          <div class="breadcrumb">Home / <span style="color:#cbd5e1">Customers</span></div>
+          <h2 style="margin:6px 0 0;font-size:22px">Customers</h2>
+        </div>
+      </div>
+      <div class="panel">
+        <p style="color:var(--muted)">Customers page (lifetime value, segments, etc. can go here).</p>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="section-settings" class="section">
+      <div class="page-head">
+        <div>
+          <div class="breadcrumb">Home / <span style="color:#cbd5e1">Settings</span></div>
+          <h2 style="margin:6px 0 0;font-size:22px">Settings</h2>
+        </div>
+      </div>
+      <div class="panel">
+        <p style="color:var(--muted)">Store settings page.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Format helpers
+    const fmtCurrency = n =>
+      n.toLocaleString(undefined, { style:'currency', currency:'USD', maximumFractionDigits:0 });
+    const fmtPct = n => (n*100).toFixed(1) + '%';
+
+    let salesChart, ordersChart;
+
+    function makeOrUpdateChart(chartRef, ctx, config){
+      if(chartRef){
+        chartRef.data = config.data;
+        chartRef.options = config.options;
+        chartRef.update();
+        return chartRef;
+      }
+      return new Chart(ctx, config);
+    }
+
+    async function fetchAnalytics(days){
+      const res = await fetch(`/api/analytics?range=${days}`);
+      if (!res.ok) throw new Error('Failed to load analytics');
+      return await res.json();
+    }
+
+    async function updateDashboard(days){
+      try {
+        const data = await fetchAnalytics(days);
+
+        const { totalSales, totalOrders, visitors, conversion } = data.kpis || {
+          totalSales:0, totalOrders:0, visitors:0, conversion:0
+        };
+
+        // KPIs
+        document.getElementById('kpi-sales').textContent    = fmtCurrency(totalSales);
+        document.getElementById('kpi-orders').textContent   = (totalOrders || 0).toLocaleString();
+        document.getElementById('kpi-visitors').textContent = (visitors || 0).toLocaleString();
+        document.getElementById('kpi-cr').textContent       = fmtPct(conversion || 0);
+
+        // Simple deltas vs previous: if API returns "prev" you can use that.
+        // For now, hide text if none.
+        ['kpi-sales-delta','kpi-orders-delta','kpi-visitors-delta','kpi-cr-delta']
+          .forEach(id => document.getElementById(id).textContent = '');
+
+        // Window label
+        if (data.labels && data.labels.length){
+          const first = data.labels[0];
+          const last  = data.labels[data.labels.length-1];
+          document.getElementById('windowLabel').textContent = ` (${first} – ${last})`;
+        } else {
+          document.getElementById('windowLabel').textContent = '';
+        }
+
+        // Charts
+        const salesCfg = {
+          type:'line',
+          data:{
+            labels: data.labels || [],
+            datasets:[{
+              label:'Sales',
+              data:data.sales || [],
+              borderWidth:2,
+              fill:false,
+              tension:.3
+            }]
+          },
+          options:{
+            responsive:true,
+            plugins:{ legend:{display:false} },
+            scales:{ y:{ beginAtZero:true } }
+          }
+        };
+
+        const ordersCfg = {
+          type:'bar',
+          data:{
+            labels: data.labels || [],
+            datasets:[{
+              label:'Orders',
+              data:data.orders || [],
+              borderWidth:1
+            }]
+          },
+          options:{
+            responsive:true,
+            plugins:{ legend:{display:false} },
+            scales:{ y:{ beginAtZero:true } }
+          }
+        };
+
+        salesChart = makeOrUpdateChart(
+          salesChart,
+          document.getElementById('salesChart').getContext('2d'),
+          salesCfg
+        );
+
+        ordersChart = makeOrUpdateChart(
+          ordersChart,
+          document.getElementById('ordersChart').getContext('2d'),
+          ordersCfg
+        );
+
+        // Top products table
+        const tbody = document.querySelector('#topProductsTable tbody');
+        tbody.innerHTML = '';
+        (data.topProducts || []).forEach(p => {
+          const tr = document.createElement('tr');
+          tr.innerHTML =
+            `<td>${p.name}</td>
+             <td><span class="pill">${p.units}</span></td>
+             <td>${fmtCurrency(p.revenue)}</td>`;
+          tbody.appendChild(tr);
+        });
+
+      } catch (err) {
+        console.error(err);
+        // Minimal visible feedback
+        document.getElementById('windowLabel').textContent = ' (error loading data)';
+      }
+    }
+
+    // Range selector
+    const rangeSel = document.getElementById('range');
+    rangeSel.addEventListener('change', () =>
+      updateDashboard(parseInt(rangeSel.value))
+    );
+
+    // Sidebar navigation
+    const navLinks = document.querySelectorAll('.sidebar a[data-section]');
+    function activateSection(section){
+      navLinks.forEach(a =>
+        a.classList.toggle('active', a.dataset.section === section)
+      );
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      const target = document.getElementById('section-' + section);
+      if (target) target.classList.add('active');
+    }
+    navLinks.forEach(a => {
+      a.addEventListener('click', () => activateSection(a.dataset.section));
+    });
+
+    // Logout demo
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn){
+      logoutBtn.addEventListener('click', () => alert('Logged out (demo)'));
+    }
+
+    // Initial load
+    updateDashboard(parseInt(rangeSel.value));
+    
+    // Export CSV for current charts
+    document.getElementById('exportBtn').addEventListener('click', () => {
+      if (!salesChart || !ordersChart) return;
+      const labels = salesChart.data.labels;
+      const sales  = salesChart.data.datasets[0].data;
+      const orders = ordersChart.data.datasets[0].data;
+      const rows = [['Date','Sales','Orders'], ...labels.map((l,i)=>[l,sales[i],orders[i]])];
+      const csv = rows.map(r => r.join(',')).join('\n');
+      const blob = new Blob([csv], {type:'text/csv'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'analytics_export.csv';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
