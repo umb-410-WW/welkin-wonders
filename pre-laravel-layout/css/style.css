@@ -6,11 +6,7 @@
     --welcome-banner-width: 100%;
 
     /* Navigation Bar Variables */
-<<<<<<<< HEAD:pre-laravel-layout/css/style.css
-    --placeholder-nav-bar-height: 300px;
-========
     --placeholder-nav-bar-height: 100px;
->>>>>>>> laravel-frontend-integration:public/assets/css/style.css
     --nav-z-index: 1000;
     --nav-min-gap: 30px;
     --nav-preferred-gap: 3vw;
