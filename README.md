@@ -1,59 +1,43 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Welkin Wonders
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Welkin Wonders is an e-commerce website designed as part of the UMass Boston CS 410 course.  
+It is a metaphysical-themed online store.
 
-## About Laravel
+## Project Overview
+- **Frameworks:** HTML, CSS, JavaScript, PHP, Laravel  
+- **Team Members:** Liam, Jonathan, Naim, Thea  
+- **Client Goal:** Provide a visually engaging storefront that combines an aesthetic front-end with a functional Laravel back-end.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Current Features
+- Homepage with multiple visual themes  
+- Navigation bar and footer across all pages  
+- Product shop page and admin dashboard (in progress)  
+- User authentication and database integration (in progress)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
+### Thea
+1. Designed the Genie icon that links to the Contact page.  
+2. Generated and edited genie and crystal imagery using DALL-E and personal designs via Paint.Net; all images were verified as commercially usable under current OpenAI licensing.  
+3. Assisted with frontend cleanup, ensuring responsive layouts and consistent image rendering.  
+4. Contributed to the artifacts folder organization and Sprint documentation in the GitHub repository.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Jonathan
+- Built and styled the Shop Page with product cards and review section.  
+- Developed the Contact Page using HTML and an embedded Google Form.  
+- Refined CSS structure and color schemes. Moved styles into subdirectories.  
+- Implemented page and product layout content for use.  
+- Created and tested product pages with review features.
 
-## Learning Laravel
+### Liam
+- Designed and implemented the Navigation Bar and Search Bar for products.  
+- Created the first homepage layout and integrated the site banner.  
+- Resolved banner-width and alignment issues across viewports.  
+- Developed User and Product database strucure and led transition/instructions for Laravel framework 
+- Began user authentication setup and backend routing for the Laravel transition.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Naim
+- Developed the About Us page, later merged into the homepage per client feedback.  
+- Created the Admin Page (frontend) and led its transition to Laravel.  
+- Assisted in backend framework setup and cloud-hosting configuration discussions.  
+- Integrated the Admin interface with planned database functionality.  
+- Worked on frontend adjustments and Laravel migration for the final sprint.
