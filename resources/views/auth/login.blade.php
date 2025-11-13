@@ -1,47 +1,114 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login – Welkin Wonders</title>
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+<body class="min-h-screen w-full bg-[#0d0718] text-white overflow-x-hidden">
+
+    <!-- NAV BAR (MATCHES YOUR WEBSITE) -->
+    <nav class="w-full px-8 py-4 flex items-center justify-between bg-[#1a1329] border-b border-[#2e2350] shadow-xl">
+
+        <div class="flex items-center gap-3">
+            <img src="/assets/img/crystal_ball_round.png" class="w-12 drop-shadow-lg">
+            <span class="text-2xl font-bold text-purple-300">Welkin Wonders</span>
         </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        <div class="hidden md:flex gap-8 text-gray-300 text-lg">
+            <a href="/" class="hover:text-purple-300">Home</a>
+            <a href="/contact" class="hover:text-purple-300">Contact Us</a>
+            <a href="/readings" class="hover:text-purple-300">Readings</a>
+            <a href="/shop" class="hover:text-purple-300">Shop</a>
         </div>
 
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
+        <div class="flex items-center gap-3">
+            <input type="text" placeholder="Browse our products..."
+                class="px-4 py-2 rounded-full bg-[#0f0a1a] border border-[#2e2350] text-sm text-gray-300 focus:ring-purple-500">
+            <button class="px-4 py-2 rounded-full bg-purple-600 hover:bg-purple-700 transition">Go</button>
         </div>
+    </nav>
 
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
+    <!-- FULL PAGE CENTERED LOGIN CARD -->
+    <div class="flex justify-center items-center min-h-[85vh] px-4">
+
+        <div class="w-full max-w-md bg-[#1a1329] border border-[#2e2350]
+                    rounded-2xl shadow-2xl p-10">
+
+            <div class="text-center mb-6">
+                <h1 class="text-3xl font-bold text-purple-300">Login</h1>
+                <p class="text-gray-400 mt-1">Access your Welkin account</p>
+            </div>
+
+            <!-- ERROR STATUS -->
+            @if (session('status'))
+                <div class="mb-4 text-purple-300 text-center">
+                    {{ session('status') }}
+                </div>
             @endif
 
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
+            <!-- LOGIN FORM -->
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+
+                <!-- Email -->
+                <div class="mb-5">
+                    <label for="email" class="text-purple-300 font-medium">Email</label>
+                    <input id="email" name="email" type="email" required autofocus
+                        class="mt-1 w-full bg-[#0f0a1a] border border-[#2e2350] rounded-xl px-4 py-3 text-white focus:ring-purple-500">
+                    @error('email')
+                        <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <!-- Password -->
+                <div class="mb-5">
+                    <label for="password" class="text-purple-300 font-medium">Password</label>
+                    <input id="password" name="password" type="password" required
+                        class="mt-1 w-full bg-[#0f0a1a] border border-[#2e2350] rounded-xl px-4 py-3 text-white focus:ring-purple-500">
+                    @error('password')
+                        <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <!-- Remember Me -->
+                <div class="flex items-center mb-5">
+                    <input id="remember_me" type="checkbox"
+                           class="rounded text-purple-600 border-gray-300 focus:ring-purple-500"
+                           name="remember">
+                    <label for="remember_me" class="ms-2 text-sm text-gray-300">
+                        Remember me
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="w-full py-3 bg-purple-600 hover:bg-purple-700 rounded-xl font-semibold shadow-lg shadow-purple-900/40 transition">
+                    Log In
+                </button>
+
+                <!-- Forgot Password -->
+                <div class="text-center mt-4">
+                    @if (Route::has('password.request'))
+                        <a href="{{ route('password.request') }}"
+                           class="text-sm text-gray-400 hover:text-purple-300 underline transition">
+                            Forgot your password?
+                        </a>
+                    @endif
+                </div>
+            </form>
+
+            <!-- REGISTER LINK -->
+            <a href="{{ route('register') }}"
+               class="block w-full text-center mt-6 py-3 bg-[#2e2350] hover:bg-[#3d2f6b] rounded-xl transition">
+                Create a New Account
+            </a>
+
         </div>
-    </form>
-</x-guest-layout>
+    </div>
+
+</body>
+</html>
