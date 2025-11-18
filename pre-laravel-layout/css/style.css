@@ -159,9 +159,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--nav-horizontal-padding);
+    padding-inline: var(--nav-horizontal-padding);
     background-color: var(--clr-surface-tonal-a10);
     gap: var(--nav-min-gap);
+    
+    width: 100vw;
+    overflow-x: scroll;
 }
 
 /* Items on the left of the nav bar */
@@ -182,12 +185,21 @@ nav {
     gap: var(--nav-logo-gap);
 }
 
+.logo img {
+    height: var(--placeholder-nav-bar-height);
+    aspect-ratio: 1;
+}
+
+/* Navbar Content */
+
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    gap: var(--nav-min-gap);
+}
+
 /* Items on the right of the nav bar */
 .search-and-login {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 20px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -274,6 +286,34 @@ nav {
 #search-form button:hover {
     background-color: var(--clr-primary-a30);
     transition: 0.5s ease;
+}
+
+#mobile-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    #mobile-toggle {
+        display: block;
+    }
+    nav {
+        overflow-y: visible;
+    }
+    .nav-content {
+        display: none;
+        flex-direction: column;
+        columns: 1;
+        position: fixed;
+        top: var(--placeholder-nav-bar-height);
+        background-color: #22946e;
+    }
+    .logo-and-links {
+        flex-direction: column;
+    }
+
+    #mobile-toggle:checked ~ .nav-content {
+        display: block;
+    }
 }
 
 /* Footer Styling */
