@@ -55,6 +55,12 @@
     background-position: 50% 50%;
 }
 
+@media screen and (max-width: 800px) {
+    .product-card {
+        flex-basis: 100%;
+    }
+}
+
 .product-title {
     height: var(--card-title-height);
     /* overflow: hidden; */

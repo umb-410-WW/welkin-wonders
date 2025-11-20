@@ -24,7 +24,8 @@
     background-color: white;
     width: 100%;
     aspect-ratio: 1;
-    border-radius: var(--img-radius);
+    /* border-radius: var(--img-radius); */
+    border-radius: 100%;
 }
 
 #product-top,
