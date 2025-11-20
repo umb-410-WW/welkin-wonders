@@ -53,7 +53,7 @@ Route::controller(ProductController::class)->group(function () {
         Route::post('/products', 'store')->name('products.store');
         Route::get('/products/{product:slug}/edit', 'edit')->name('products.edit');
         Route::put('/products/{product:slug}', 'update')->name('products.update');
-        Route::delete('/products/{product:slug}', 'destroy')->name('products.destroy');
+        Route::delete('/products/{product:id}', 'destroy')->name('products.destroy');
     });
 
     // Routes available to all users

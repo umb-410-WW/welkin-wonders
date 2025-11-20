@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 
@@ -31,10 +32,13 @@ class HomeController extends Controller
         return view('shop');
     }
 
-
     // Directs the user to the admin dashboard when called
     public function admin() : view
     {
-        return view('admin.index');
+        // All products
+        $products = Product::all();
+
+        // Pass all the products to the admin page for editing
+        return view('admin.index', compact('products'));
     }
 }
