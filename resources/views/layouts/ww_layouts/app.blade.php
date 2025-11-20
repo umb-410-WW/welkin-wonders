@@ -14,7 +14,6 @@
     @yield('banner')
     {{-- Display the navigation bar --}}
     <x-ww_components.navigation></x-ww_components.navigation>
-
     @yield('content')
     @yield('scripts')
 </body>
