@@ -183,6 +183,7 @@ nav {
     justify-content: center;
     color: var(--clr-primary-a10);
     gap: var(--nav-logo-gap);
+    text-decoration: none;
 }
 
 .logo img {
@@ -292,27 +293,63 @@ nav {
     display: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
     #mobile-toggle {
         display: block;
+        position: fixed;
+        top: var(--nav-button-padding);
+        right: calc((100vw - min(1000px, 90vw)) / 2);
+        width: 2rem;
+        height: 2rem;
+        z-index: 1;
     }
     nav {
         overflow-y: visible;
     }
     .nav-content {
-        display: none;
         flex-direction: column;
         columns: 1;
         position: fixed;
-        top: var(--placeholder-nav-bar-height);
-        background-color: #22946e;
+        top: -100%;
+        padding: var(--nav-button-padding);
+        /* padding-top: var(--placeholder-nav-bar-height); */
+        background-color: var(--clr-surface-tonal-a10);
+        border-radius: 0 0 var(--nav-button-border-radius) var(--nav-button-border-radius);
+
+        /* width: min(1000px, 90vw); */
+        width: 100vw;
+        left: 50vw;
+        transform: translateX(-50%);
+
+        transition: top 0.4s;
     }
     .logo-and-links {
         flex-direction: column;
     }
+    .search-and-login {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "search search" "login register";
+        width: 100%;
+        /* gap: 0; */
+        justify-content: center;
+    }
+    #search {grid-area: search;}
+    #search-and-login:nth-child(2) {grid-area: login;}
+    #search-and-login:nth-child(3) {grid-area: register;}
+
+    #search {
+        width: 100%;
+    }
+
+    #search-form {
+        min-width: 100%;
+    }
 
     #mobile-toggle:checked ~ .nav-content {
         display: block;
+        top: 0;
     }
 }
 
