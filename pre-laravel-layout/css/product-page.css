@@ -91,3 +91,12 @@
     overflow-x: scroll;
     width: 100%;
 }
+
+@media screen and (max-width: 1250px) {
+    #product-top {
+        grid-template-columns: 1fr;
+    }
+    #products {
+        flex-direction: column;
+    }
+}
