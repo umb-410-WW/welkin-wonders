@@ -512,3 +512,76 @@ nav a.active {
     .letter-flap { height: 64px; }
     .letter-gallery { grid-template-columns: 1fr 1fr; }
 }
+
+
+footer {
+    background-color: #140728;
+    color: #eee;
+    padding: 55px 0;
+    width: 100%;
+    position: relative;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-nav a {
+    color: #caaaff;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.admin-link {
+    font-size: 0.85rem;
+    color: #9e69ff;
+    opacity: 0.75;
+    text-decoration: none;
+}
+
+.admin-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
