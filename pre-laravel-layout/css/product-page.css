@@ -40,12 +40,13 @@
 }
 
 
-
-
 #product-desc {
-    line-height: 2rem;
+    font-size: 1.25rem;
 }
 
+hr {
+    margin: 100px 0;
+}
 
 /* #product-review {
     background-color: var(--clr-primary-a50);
@@ -92,7 +93,7 @@
     width: 100%;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 800px) {
     #product-top {
         grid-template-columns: 1fr;
     }

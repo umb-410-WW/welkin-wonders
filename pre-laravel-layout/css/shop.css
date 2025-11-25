@@ -50,16 +50,25 @@
     width: var(--card-height);
     aspect-ratio: 4/3;
     overflow: hidden;
-
-    background-size: cover;
-    background-position: 50% 50%;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 800px) {
     .product-card {
         flex-basis: 100%;
         width: 100%;
     }
+}
+
+.product-card a {
+    text-decoration: none;
+    color: var(--clr-dark-a0);
+}
+
+.product-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .product-title {
