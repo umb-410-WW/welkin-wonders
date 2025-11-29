@@ -116,6 +116,7 @@ nav {
     
     width: 100vw;
     overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 /* Items on the left of the nav bar */
@@ -135,10 +136,11 @@ nav {
     color: var(--clr-primary-a10);
     gap: var(--nav-logo-gap);
     text-decoration: none;
+    height: 100%;
 }
 
 .logo img {
-    height: var(--placeholder-nav-bar-height);
+    height: 100%;
     aspect-ratio: 1;
 }
 
@@ -162,7 +164,7 @@ nav {
     text-decoration: none;
     padding: var(--nav-button-padding);
     color: var(--clr-light-a0);
-    border-radius: var(--nav-button-border-radius)
+    border-radius: var(--nav-button-border-radius);
 }
 
 .nav-button:hover {
@@ -244,26 +246,41 @@ nav {
     display: none;
 }
 
+#mobile-toggle-custom {
+    display: block;
+    width: 3rem;
+    aspect-ratio: 1;
+    position: fixed;
+    top: var(--nav-button-padding);
+    right: var(--nav-horizontal-padding);
+    border-radius: 100%;
+    z-index: 1;
+    background-color: var(--clr-primary-a0);
+    overflow: hidden;
+}
+
 @media screen and (max-width: 1250px) {
-    #mobile-toggle {
+    #mobile-toggle-custom {
         display: block;
-        position: fixed;
-        top: var(--nav-button-padding);
-        right: calc((100vw - min(1000px, 90vw)) / 2);
-        width: 2rem;
-        height: 2rem;
-        z-index: 1;
     }
     nav {
-        overflow-y: visible;
+        position: relative;
+        overflow: hidden;
+        background-color: none;
+    }
+    .logo {
+        /* position: fixed;
+        left: var(--nav-horizontal-padding);
+        top: var(--nav-button-padding); */
+        z-index: 1;
     }
     .nav-content {
         flex-direction: column;
         columns: 1;
         position: fixed;
-        top: -100%;
+        top: -200%;
         padding: var(--nav-button-padding);
-        /* padding-top: var(--placeholder-nav-bar-height); */
+        padding-top: var(--placeholder-nav-bar-height);
         background-color: var(--clr-surface-tonal-a10);
         border-radius: 0 0 var(--nav-button-border-radius) var(--nav-button-border-radius);
 
@@ -299,7 +316,6 @@ nav {
     }
 
     #mobile-toggle:checked ~ .nav-content {
-        display: block;
         top: 0;
     }
 }
