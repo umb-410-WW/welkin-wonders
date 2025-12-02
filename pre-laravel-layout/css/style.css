@@ -159,9 +159,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--nav-horizontal-padding);
+    padding-inline: var(--nav-horizontal-padding);
     background-color: var(--clr-surface-tonal-a10);
     gap: var(--nav-min-gap);
+    
+    width: 100vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 /* Items on the left of the nav bar */
@@ -180,14 +184,25 @@ nav {
     justify-content: center;
     color: var(--clr-primary-a10);
     gap: var(--nav-logo-gap);
+    text-decoration: none;
+    height: 100%;
+}
+
+.logo img {
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+/* Navbar Content */
+
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    gap: var(--nav-min-gap);
 }
 
 /* Items on the right of the nav bar */
 .search-and-login {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 20px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -198,7 +213,7 @@ nav {
     text-decoration: none;
     padding: var(--nav-button-padding);
     color: var(--clr-light-a0);
-    border-radius: var(--nav-button-border-radius)
+    border-radius: var(--nav-button-border-radius);
 }
 
 .nav-button:hover {
@@ -274,6 +289,84 @@ nav {
 #search-form button:hover {
     background-color: var(--clr-primary-a30);
     transition: 0.5s ease;
+}
+
+#mobile-toggle {
+    display: none;
+}
+
+#mobile-toggle-custom {
+    display: block;
+    width: 3rem;
+    aspect-ratio: 1;
+    position: fixed;
+    top: var(--nav-button-padding);
+    right: var(--nav-horizontal-padding);
+    border-radius: 100%;
+    z-index: 1;
+    background-color: var(--clr-primary-a0);
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1250px) {
+    #mobile-toggle-custom {
+        display: block;
+    }
+    nav {
+        position: relative;
+        overflow: hidden;
+        background-color: none;
+    }
+    .logo {
+        /* position: fixed;
+        left: var(--nav-horizontal-padding);
+        top: var(--nav-button-padding); */
+        z-index: 1;
+    }
+    .nav-content {
+        flex-direction: column;
+        columns: 1;
+        position: fixed;
+        top: -200%;
+        padding: var(--nav-button-padding);
+        padding-top: var(--placeholder-nav-bar-height);
+        background-color: var(--clr-surface-tonal-a10);
+        border-radius: 0 0 var(--nav-button-border-radius) var(--nav-button-border-radius);
+
+        /* width: min(1000px, 90vw); */
+        width: 100vw;
+        left: 50vw;
+        transform: translateX(-50%);
+
+        transition: top 0.4s;
+    }
+    .logo-and-links {
+        flex-direction: column;
+    }
+    .search-and-login {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "search search" "login register";
+        width: 100%;
+        /* gap: 0; */
+        justify-content: center;
+    }
+    #search {grid-area: search;}
+    #search-and-login:nth-child(2) {grid-area: login;}
+    #search-and-login:nth-child(3) {grid-area: register;}
+
+    #search {
+        width: 100%;
+    }
+
+    #search-form {
+        min-width: 100%;
+    }
+
+    #mobile-toggle:checked ~ .nav-content {
+        top: 0;
+    }
 }
 
 /* Footer Styling */
@@ -434,4 +527,77 @@ nav a.active {
 
     .letter-flap { height: 64px; }
     .letter-gallery { grid-template-columns: 1fr 1fr; }
+}
+
+
+footer {
+    background-color: #140728;
+    color: #eee;
+    padding: 55px 0;
+    width: 100%;
+    position: relative;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-nav a {
+    color: #caaaff;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.admin-link {
+    font-size: 0.85rem;
+    color: #9e69ff;
+    opacity: 0.75;
+    text-decoration: none;
+}
+
+.admin-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
 }
