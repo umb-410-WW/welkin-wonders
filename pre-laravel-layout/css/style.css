@@ -247,7 +247,7 @@ nav {
 }
 
 #mobile-toggle-custom {
-    display: block;
+    display: none; /* display: block; when Mobile Width*/
     width: 3rem;
     aspect-ratio: 1;
     position: fixed;
