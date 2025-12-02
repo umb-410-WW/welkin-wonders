@@ -305,7 +305,14 @@ nav {
     border-radius: 100%;
     z-index: 1;
     background-color: var(--clr-primary-a0);
+    background-image: url("../img/assets/icon_menu_open.svg");
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
+}
+#mobile-toggle-custom:hover {
+    background-color: var(--clr-primary-a50);
 }
 
 @media screen and (max-width: 1250px) {
@@ -364,6 +371,9 @@ nav {
         min-width: 100%;
     }
 
+    #mobile-toggle:checked ~ #mobile-toggle-custom {
+        background-image: url("../img/assets/icon_menu_close.svg");
+    }
     #mobile-toggle:checked ~ .nav-content {
         top: 0;
     }
