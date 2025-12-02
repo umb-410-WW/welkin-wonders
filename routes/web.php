@@ -47,12 +47,13 @@ Route::controller(ProductController::class)->group(function () {
     - Update products
     - Delete products
     */
+
     Route::middleware(['auth', 'verified', 'admin'])->group(function () {
         Route::get('/products', 'index')->name('products.index');
         Route::get('/products/create', 'create')->name('products.create');
         Route::post('/products', 'store')->name('products.store');
         Route::get('/products/{product:slug}/edit', 'edit')->name('products.edit');
-        Route::put('/products/{product:slug}', 'update')->name('products.update');
+        Route::put('/products/{product:slug}/update', 'update')->name('products.update');
         Route::delete('/products/{product:id}', 'destroy')->name('products.destroy');
     });
 
