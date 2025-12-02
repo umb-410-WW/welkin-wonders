@@ -20,6 +20,9 @@
                 @auth
                     <!-- Display dashboard if logged in -->
                     <a href="{{ url('/dashboard') }}" class="nav-button login-button">Dashboard</a>
+                    @if(auth()->user()?->user_type ==='admin')
+                        <a href="{{ route('admin.dashboard') }}" class="nav-button login-button">Administration</a>
+                    @endif
                 @else
                     <!-- Display login/register if not logged in -->
                     <a href="{{ route('login') }}" class="nav-button login-button">Login</a>
@@ -29,5 +32,10 @@
                     @endif
                 @endauth
          @endif
+
+        @auth
+            {{-- Display shopping cart if logged in --}}
+            <a href="{{ route('cart.index') }}" class="nav-button login-button">Cart</a>
+        @endauth
     </div>
 </nav>
