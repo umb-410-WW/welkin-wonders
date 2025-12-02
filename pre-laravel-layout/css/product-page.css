@@ -24,7 +24,8 @@
     background-color: white;
     width: 100%;
     aspect-ratio: 1;
-    border-radius: var(--img-radius);
+    /* border-radius: var(--img-radius); */
+    border-radius: 100%;
 }
 
 #product-top,
@@ -39,12 +40,13 @@
 }
 
 
-
-
 #product-desc {
-    line-height: 2rem;
+    font-size: 1.25rem;
 }
 
+hr {
+    margin: 100px 0;
+}
 
 /* #product-review {
     background-color: var(--clr-primary-a50);
@@ -89,4 +91,13 @@
     overflow: scroll;
     overflow-x: scroll;
     width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    #product-top {
+        grid-template-columns: 1fr;
+    }
+    #products {
+        flex-direction: column;
+    }
 }

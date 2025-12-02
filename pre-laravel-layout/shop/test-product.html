@@ -22,16 +22,30 @@
 
     <!-- Navigation Bar-->  
     <nav>
-        <div class="logo">
-            <img src="gem_ai.jpg" alt="Logo" width="80" height="100">
+        <a class="logo" href="index.html">
+            <img src="img/assets/crystal_ball_round.png" alt="Logo">
             <h2>Welkin<br>Wonders</h2>
+        </a>
+        <input id="mobile-toggle" type='checkbox'>
+        <div class="nav-content">
+            <div class="logo-and-links">
+                <!-- <a class="nav-button" href="index.html">Home</a>          -->
+                <a class="nav-button" href="contact.html">Contact Us</a>
+                <a class="nav-button" href="#readings">Readings</a> 
+                <a class="nav-button" href="#shop">Shop</a>
+            </div>  
+            <div class="search-and-login">
+                <div id="search">
+                    <form id="search-form" action="non-existent-file.php" method="GET">
+                        <input type="text" name="search" placeholder="Browse our products...">
+                        <button type="submit">Go</button>
+                    </form>
+                </div> 
+                <a class="nav-button login-button" href="#">Login</a>
+                <a class="nav-button login-button" href="#">Register</a> 
+            </div>
         </div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>           
-        <a href="contact.html">Contact Us</a>
-        <a href="#readings">Readings</a> 
-        <a href="#shop">Shop</a>     
-     </nav>
+    </nav>
 
     <article id="product-strip">
         <section id="product-top">
@@ -46,29 +60,19 @@
                 </div>
             </div>
         </section>
-        <p id="product-desc">According to all known laws of aviation, there is no way a bee should be able to fly.
-        Its wings are too small to get its fat little body off the ground.
-        The bee, of course, flies anyway because bees don't care what humans think is impossible.
-        Yellow, black. Yellow, black. Yellow, black. Yellow, black.
-        Ooh, black and yellow!
-        Let's shake it up a little.
-        Barry! Breakfast is ready!
-        Coming!
-        Hang on a second.
-        Hello?
-        Barry?
-        Adam?
-        Can you believe this is happening?
-        I can't.
-        I'll pick you up.
-        Looking sharp.
-        Use the stairs, Your father paid good money for those.
-        Sorry. I'm excited.
-        Here's the graduate.
-        We're very proud of you, son.
-        A perfect report card, all B's.
-        Very proud.
-        Ma! I got a thing going here.</p>
+        <div id="product-desc">
+            <p>Wowie Zowie! This rock gives me the heeby jeebies! But it feels so nice...</p>
+            <h2>Attributes</h2>
+            <ul id="product-attributes">
+                <li>Attribute 1</li>
+                <li>Attribute 2</li>
+                <li>Attribute 4</li>
+                <li>Wait I forgot how to count</li>
+            </ul>
+        </div>
+
+        <hr>
+
         <div id="product-review">
             <h2>Reviews</h2>
             <div id="product-review-subdiv">
@@ -95,39 +99,57 @@
         <h2>More Products</h2>
 
         <div id="products">
-                <div class="product-card" style="background-image: url(../img/shop_img/Dark_Stone_Red_Inclusions_Eudialyte.jpg)">
+            <div class="product-card">
+                <a href="shop/test-product.html">
+                    <img class="product-img" alt='Test Product' src="../img/shop_img/dark_gray_black_stone_labradorite.jpg">
                     <div class="product-desc">
                         <div class="product-title">
-                            <h3>Test0</h3>
-                            <p class="product-price">1 Gummillion Dollars</p>
+                            <h3>Product Title</h3>
+                            <p class="product-price">Price</p>
                         </div>
-                        <p>Short Description Here</p>
-                        <a href="${page}">Product Page</a>
+                        <ul>
+                            <li>Attribute 1</li>
+                            <li>Attribute 1 Again</li>
+                            <li>Attribute 1 3</li>
+                        </ul>
                     </div>
-                    <a class="product-cart">Cart</a>
-                </div>
-                <div class="product-card" style="background-image: url(../img/shop_img/Dark_Stone_Red_Inclusions_Eudialyte.jpg)">
+                </a>
+                <a class="product-cart">Cart</a>
+            </div>
+            <div class="product-card">
+                <a href="shop/test-product.html">
+                    <img class="product-img" alt='Test Product' src="../img/shop_img/dark_gray_black_stone_labradorite.jpg">
                     <div class="product-desc">
                         <div class="product-title">
-                            <h3>Test0</h3>
-                            <p class="product-price">1 Gummillion Dollars</p>
+                            <h3>Product Title</h3>
+                            <p class="product-price">Price</p>
                         </div>
-                        <p>Short Description Here</p>
-                        <a href="${page}">Product Page</a>
+                        <ul>
+                            <li>Attribute 1</li>
+                            <li>Attribute 1 Again</li>
+                            <li>Attribute 1 3</li>
+                        </ul>
                     </div>
-                    <a class="product-cart">Cart</a>
-                </div>
-                <div class="product-card" style="background-image: url(../img/shop_img/Dark_Stone_Red_Inclusions_Eudialyte.jpg)">
+                </a>
+                <a class="product-cart">Cart</a>
+            </div>
+            <div class="product-card">
+                <a href="shop/test-product.html">
+                    <img class="product-img" alt='Test Product' src="../img/shop_img/dark_gray_black_stone_labradorite.jpg">
                     <div class="product-desc">
                         <div class="product-title">
-                            <h3>Test0</h3>
-                            <p class="product-price">1 Gummillion Dollars</p>
+                            <h3>Product Title</h3>
+                            <p class="product-price">Price</p>
                         </div>
-                        <p>Short Description Here</p>
-                        <a href="${page}">Product Page</a>
+                        <ul>
+                            <li>Attribute 1</li>
+                            <li>Attribute 1 Again</li>
+                            <li>Attribute 1 3</li>
+                        </ul>
                     </div>
-                    <a class="product-cart">Cart</a>
-                </div>
+                </a>
+                <a class="product-cart">Cart</a>
+            </div>
             </div>
         </section>
 

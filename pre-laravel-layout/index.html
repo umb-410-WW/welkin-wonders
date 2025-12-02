@@ -21,26 +21,31 @@
 
     <!-- Navigation Bar-->  
     <nav>
-        <div class="logo-and-links">
-                <div class="logo">
-                <img src="../welkin-wonders/img/assets/crystal_ball_round.png" alt="Logo" width="200" height="200">
-                <h2>Welkin<br>Wonders</h2>
+        <a class="logo" href="index.html">
+            <img src="img/assets/crystal_ball_round.png" alt="Logo">
+            <h2>Welkin<br>Wonders</h2>
+        </a>
+        <label id="mobile-toggle-custom" for="mobile-toggle">img</label>
+        <input id="mobile-toggle" type='checkbox'>
+        <div class="nav-content">
+            <div class="logo-and-links">
+                <!-- <a class="nav-button" href="index.html">Home</a>          -->
+                <a class="nav-button" href="contact.html">Contact Us</a>
+                <a class="nav-button" href="#readings">Readings</a> 
+                <a class="nav-button" href="#shop">Shop</a>
+            </div>  
+            <div class="search-and-login">
+                <div id="search">
+                    <form id="search-form" action="non-existent-file.php" method="GET">
+                        <input type="text" name="search" placeholder="Browse our products...">
+                        <button type="submit">Go</button>
+                    </form>
+                </div> 
+                <a class="nav-button login-button" href="#">Login</a>
+                <a class="nav-button login-button" href="#">Register</a> 
             </div>
-            <a class="nav-button" href="index.html">Home</a>         
-            <a class="nav-button" href="contact.html">Contact Us</a>
-            <a class="nav-button" href="#readings">Readings</a> 
-            <a class="nav-button" href="#shop">Shop</a> 
-        </div>  
-        <div class="search-and-login">
-            <div id="search">
-                <form id="search-form" action="non-existent-file.php" method="GET">
-                    <input type="text" name="search" placeholder="Browse our products...">
-                    <button type="submit">Go</button>
-                </form>
-            </div> 
-            <a class="nav-button login-button" href="#">Login</a> 
         </div>
-     </nav>
+    </nav>
       
     
     <div id="genie-float">
@@ -61,9 +66,26 @@
     </section>
 
     <!-- Footer Area -->
-     <footer>
-        <p>Placeholder footer text</p>
-     </footer>
+    <footer>
+        <div class="footer-container">
+
+            <!-- Footer Navigation -->
+            <ul class="footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#readings">Readings</a></li>
+                <li><a href="#shop">Shop</a></li>
+            </ul>
+
+            <!-- Footer Info -->
+            <div class="footer-info">
+                <p>© 2025 Welkin Wonders. All rights reserved.</p>
+                <a class="admin-link" href="admin-login.html">Admin Sign In</a>
+            </div>
+
+        </div>
+    </footer>
+
 </body>
 </html>
 
