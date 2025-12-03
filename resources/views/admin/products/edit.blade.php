@@ -23,8 +23,8 @@
         <input type="checkbox" name="is_active" id="is_active">
         <label for="is_active">Active</label>
 
-        <label for="images">Product Images</label>
-        <input type="file" name="images[]" id="images" multiple>
+        <label for="image">Product Image</label>
+        <input type="file" name="image" id="image" accept="image/*">
 
         <button type="submit">Create Product</button>
     </form>
