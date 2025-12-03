@@ -12,6 +12,11 @@
         <div id="cart-items">
             @foreach ($cart->items as $item)
                 <div class="cart-item">
+                    @if ($item->product->image)
+                        <img alt="Product Image" src="{{ asset('storage/' . $item->product->image->image_path) }}">
+                    @else
+                        <img alt="Product Image" src="">
+                    @endif
                     <strong class="cart-item-description">{{ $item->product->name }}</strong>
                     ({{ $item->quantity }} * ${{ $item->product->price }})
 

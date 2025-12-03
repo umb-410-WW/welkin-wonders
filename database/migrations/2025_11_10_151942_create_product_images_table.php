@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('product_id')->constrained('products')->onDelete('cascade'); // Delete the entry if the associated product is deleted
             $table->string('image_path');
-            $table->boolean('is_primary')->default(false);
             $table->timestamps();
         });
     }

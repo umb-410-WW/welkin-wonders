@@ -3,6 +3,9 @@
 @section('style')
     <link rel="stylesheet" href="{{ asset('assets/css/shop.css') }}">
 @endsection
+@section('scripts')
+    <link rel=""
+@endsection
 @section('content')
     <section>
         <h1>Shop</h1>

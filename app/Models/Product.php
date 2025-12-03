@@ -17,9 +17,9 @@ class Product extends Model
         'is_active'
     ];
 
-    // Establish a one-to-many relationship with ProductImage table
-    public function images()
+    // Establish a one-to-one relationship with ProductImage table
+    public function image()
     {
-        return $this->hasMany(ProductImage::class);
+        return $this->hasOne(ProductImage::class);
     }
 }

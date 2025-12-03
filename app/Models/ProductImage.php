@@ -12,7 +12,7 @@ class ProductImage extends Model
         'is_primary'
     ];
 
-    // Establish many-to-one relationship with Product table
+    // Establish one-to-one relationship with Product table
     public function product()
     {
         return $this->belongsTo(Product::class);
