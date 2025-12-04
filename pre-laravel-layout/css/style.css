@@ -314,13 +314,6 @@ nav {
         /* position: relative; */
         background-color: none;
     }
-    .logo {
-        /* position: fixed;
-        left: var(--nav-horizontal-padding);
-        top: var(--nav-button-padding); */
-        z-index: 1;
-        transition: top 0.4s;
-    }
     .nav-content {
         flex-direction: column;
         columns: 1;
@@ -366,11 +359,6 @@ nav {
         background-image: url("../img/assets/icon_menu_close.svg");
     }
     #mobile-toggle:checked ~ .nav-content {
-        top: 0;
-    }
-    #mobile-toggle:checked ~ .logo {
-        position: fixed;
-        height: var(--placeholder-nav-bar-height);
         top: 0;
     }
 }
