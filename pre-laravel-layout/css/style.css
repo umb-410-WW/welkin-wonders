@@ -97,7 +97,7 @@ body {
 nav {
     position: sticky;
     margin: 0;
-    top: 0px;
+    top: 0;
     z-index: var(--nav-z-index);
     height: var(--placeholder-nav-bar-height);
     display: flex;
@@ -107,9 +107,10 @@ nav {
     background-color: var(--clr-surface-tonal-a10);
     gap: var(--nav-min-gap);
     
-    width: 100vw;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
 }
 
 /* Items on the left of the nav bar */
@@ -262,7 +263,6 @@ nav {
     }
     nav {
         /* position: relative; */
-        overflow: hidden;
         background-color: none;
     }
     .logo {
@@ -270,6 +270,7 @@ nav {
         left: var(--nav-horizontal-padding);
         top: var(--nav-button-padding); */
         z-index: 1;
+        transition: top 0.4s;
     }
     .nav-content {
         flex-direction: column;
@@ -318,6 +319,11 @@ nav {
     #mobile-toggle:checked ~ .nav-content {
         top: 0;
     }
+    #mobile-toggle:checked ~ .logo {
+        position: fixed;
+        height: var(--placeholder-nav-bar-height);
+        top: 0;
+    }
 }
 
 /* Footer Styling */
@@ -332,7 +338,7 @@ footer {
 
 /* ========== ABOUT PAGE STYLING ========== */
 #about {
-    min-height: calc(100vh - var(--placeholder-nav-bar-height) - var(--placeholder-footer-height) - var(--placeholder-banner-height));
+    /* min-height: calc(100vh - var(--placeholder-nav-bar-height) - var(--placeholder-footer-height) - var(--placeholder-banner-height)); */
     /* height: var(--about-us-height); */
     
     width: min(900px, 92vw);
@@ -490,15 +496,6 @@ footer {
     opacity: 1;
     text-decoration: underline;
 }
-
-html, body {
-    height: 100%;
-}
-
-/* body {
-    display: flex;
-    flex-direction: column;
-} */
 
 footer {
     margin-top: auto;
