@@ -175,12 +175,8 @@
             <label class="ww-label" for="is_active" style="margin:0;">Active</label>
         </div>
 
-        <div class="ww-group">
-            <label class="ww-label" for="images">Product Images</label>
-            <input type="file" id="images" name="images[]" class="ww-file" multiple>
-        </div>
-
-        <button type="submit" class="ww-submit">Save Changes</button>
+        <label for="image">Product Image</label>
+        <input type="file" name="image" id="image" accept="image/*">
 
     </form>
 

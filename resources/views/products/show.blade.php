@@ -8,7 +8,12 @@
 @section('content')
     <article id="product-strip">
         <section id="product-top">
-            <img id="product-img" alt="Product Image" src="{{ asset('assets/shop_img/dark_gray_black_stone_labradorite.jpg') }}">
+            {{-- Display the image, if it exists --}}
+            @if ($product->image)
+                <img id="product-img" alt="Product Image" src="{{ asset('storage/' . $product->image->image_path) }}">
+            @else
+                <img id="product-img" alt="Product Image" src="">
+            @endif
             <div>
                 <div id="product-title">
                     <h1>{{ $product->name }}</h1>

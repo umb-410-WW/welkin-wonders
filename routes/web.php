@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -60,4 +61,20 @@ Route::controller(ProductController::class)->group(function () {
     // Routes available to all users
     Route::get('/shop', 'index')->name('products.shop');
     Route::get('/products/{product:slug}', 'show')->name('products.show');
+});
+
+// Cart Routes
+Route::controller(CartController::class)->group(function () {
+    /* Routes only available to logged-in users:
+    - View their given cart
+    - Add a product to their cart
+    - Update an item (e.g. quantity) in their cart
+    - Remove an item from their cart
+    */
+   Route::middleware(['auth', 'verified'])->group(function () {
+       Route::get('/cart', 'index')->name('cart.index');
+       Route::post('/cart/add/{product}', 'add')->name('cart.add');
+       Route::post('/cart/update/{item}', 'update')->name('cart.update');
+       Route::post('/cart/remove/{item}', 'remove')->name('cart.remove');
+   });
 });

@@ -44,18 +44,19 @@ class ProductController extends Controller
         ]);
 
         // Convert the checkbox to a boolean
-        $data['is_active'] = $request->has('is_active'); 
+        $data['is_active'] = $request->has('is_active');
 
         // Create the Product
         $product = Product::create($data);
 
         // Create ProductImage entries as needed
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                $path = $image->store('images', 'public');
-                // Create an associated ProductImage for each image
-                $product->images()->create(['image_path' => $path]);
-            }
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('products', 'public');
+
+            // Create the associated product image
+            $product->image()->create([
+                'image_path' => $path
+            ]);
         }
 
         // Redirects the Administrator back to the Admin dashboard
