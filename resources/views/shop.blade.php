@@ -13,7 +13,7 @@
             <h1>Shop</h1>
             <p>Choose from a selection of perfect gemstones.</p>
             <p>Use this button to guide you if you're not sure</p>
-            <a href="{{ route('products.random') }}"><img alt="Crystal Ball" src="{{asset('assets/img/crystal_ball_round.png')}}"></a>
+            <a href="{{ route('products.random') }}"><img alt="Crystal Ball" src="{{ asset('assets/img/crystal_ball_round.png') }}"></a>
         </div>
 
         {{-- Display all of the product cards --}}
