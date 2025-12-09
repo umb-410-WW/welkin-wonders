@@ -61,6 +61,7 @@ Route::controller(ProductController::class)->group(function () {
     // Routes available to all users
     Route::get('/shop', 'index')->name('products.shop');
     Route::get('/products/{product:slug}', 'show')->name('products.show');
+    Route::get('/random', 'random')->name('products.random');
 });
 
 // Cart Routes

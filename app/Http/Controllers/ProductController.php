@@ -115,4 +115,20 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('admin.dashboard')->with('success', 'Product deleted successfully.');
     }
+
+    /**
+     * Redirects the user to a random product.
+     */
+    public function random()
+    {
+        // Select a random product
+        $product = Product::inRandomOrder()->first();
+
+        if (!$product) {
+            return redirect()->route('products.shop')->with('error', 'No products available.');
+        }
+
+        // Return a view of that random product
+        return redirect()->route('products.show', $product->slug);
+    }
 }
