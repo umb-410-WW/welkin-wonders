@@ -22,7 +22,7 @@
                 <x-ww_components.product-card :product="$product"></x-ww_components.product-card>
                 {{-- Display a message if there are no products in the database --}}
             @empty
-                <p>No products are available at the moment. Stay tuned!</p>
+                <p>We could not find any products for you. Stay tuned!</p>
             @endforelse
         </div>
     </section>

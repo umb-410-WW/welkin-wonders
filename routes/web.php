@@ -62,6 +62,7 @@ Route::controller(ProductController::class)->group(function () {
     Route::get('/shop', 'index')->name('products.shop');
     Route::get('/products/{product:slug}', 'show')->name('products.show');
     Route::get('/random', 'random')->name('products.random');
+    Route::get('/search', 'search')->name('products.search');
 });
 
 // Cart Routes

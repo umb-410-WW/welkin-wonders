@@ -131,4 +131,18 @@ class ProductController extends Controller
         // Return a view of that random product
         return redirect()->route('products.show', $product->slug);
     }
+
+    /**
+     * Returns a list of products searched
+     */
+    public function search(Request $request)
+    {
+        $query = $request->get('search');
+
+        // Get products where something in the name or description matches the search
+        $products = Product::where('name', 'LIKE', '%' . $query . '%')->orWhere('description', 'LIKE', '%' . $query . '%')->get();
+
+        // Return the shop view with the select products
+        return view('shop', compact('products'));
+    }
 }

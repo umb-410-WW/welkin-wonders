@@ -13,7 +13,7 @@
         </div>
         <div class="search-and-login">
             <div id="search">
-                <form id="search-form" action="non-existent-file.php" method="GET">
+                <form id="search-form" action="{{ route('products.search') }}" method="GET">
                     <input type="text" name="search" placeholder="Browse our products...">
                     <button type="submit">Go</button>
                 </form>
