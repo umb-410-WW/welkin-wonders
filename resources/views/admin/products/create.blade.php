@@ -164,6 +164,7 @@
 
         <button type="submit" class="ww-submit">Create Product</button>
 
+        <button class="ww-submit" type="submit">Create Product</button>
     </form>
 
 </div>
