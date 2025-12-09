@@ -10,28 +10,6 @@
 
 <body class="min-h-screen w-full bg-[#0d0718] text-white overflow-x-hidden">
 
-    <!-- NAV BAR (MATCHES YOUR WEBSITE) -->
-    <nav class="w-full px-8 py-4 flex items-center justify-between bg-[#1a1329] border-b border-[#2e2350] shadow-xl">
-
-        <div class="flex items-center gap-3">
-            <img src="/assets/img/crystal_ball_round.png" class="w-12 drop-shadow-lg">
-            <span class="text-2xl font-bold text-purple-300">Welkin Wonders</span>
-        </div>
-
-        <div class="hidden md:flex gap-8 text-gray-300 text-lg">
-            <a href="/" class="hover:text-purple-300">Home</a>
-            <a href="/contact" class="hover:text-purple-300">Contact Us</a>
-            <a href="/readings" class="hover:text-purple-300">Readings</a>
-            <a href="/shop" class="hover:text-purple-300">Shop</a>
-        </div>
-
-        <div class="flex items-center gap-3">
-            <input type="text" placeholder="Browse our products..."
-                class="px-4 py-2 rounded-full bg-[#0f0a1a] border border-[#2e2350] text-sm text-gray-300 focus:ring-purple-500">
-            <button class="px-4 py-2 rounded-full bg-purple-600 hover:bg-purple-700 transition">Go</button>
-        </div>
-    </nav>
-
     <!-- FULL PAGE CENTERED LOGIN CARD -->
     <div class="flex justify-center items-center min-h-[85vh] px-4">
 
@@ -89,16 +67,6 @@
                     class="w-full py-3 bg-purple-600 hover:bg-purple-700 rounded-xl font-semibold shadow-lg shadow-purple-900/40 transition">
                     Log In
                 </button>
-
-                <!-- Forgot Password -->
-                <div class="text-center mt-4">
-                    @if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}"
-                           class="text-sm text-gray-400 hover:text-purple-300 underline transition">
-                            Forgot your password?
-                        </a>
-                    @endif
-                </div>
             </form>
 
             <!-- REGISTER LINK -->
