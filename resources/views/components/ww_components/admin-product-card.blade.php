@@ -9,7 +9,7 @@
         <p>{{ $product->description }}</p>
         <a href="{{ route('products.show', $product->slug) }}">Product Page</a>
     </div>
-    <a href="{{ route('products.edit', $product->slug) }}">Edit product</a>
+    <a href="{{ route('products.edit', $product->id) }}">Edit product</a>
     <form action="{{ route('products.destroy', $product->id) }}" method="POST">
         @csrf
         @method('DELETE')

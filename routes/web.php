@@ -53,14 +53,16 @@ Route::controller(ProductController::class)->group(function () {
         Route::get('/products', 'index')->name('products.index');
         Route::get('/products/create', 'create')->name('products.create');
         Route::post('/products', 'store')->name('products.store');
-        Route::get('/products/{product:slug}/edit', 'edit')->name('products.edit');
-        Route::put('/products/{product:slug}/update', 'update')->name('products.update');
+        Route::get('/products/{product:id}/edit', 'edit')->name('products.edit');
+        Route::put('/products/{product:id}', 'update')->name('products.update');
         Route::delete('/products/{product:id}', 'destroy')->name('products.destroy');
     });
 
     // Routes available to all users
     Route::get('/shop', 'index')->name('products.shop');
     Route::get('/products/{product:slug}', 'show')->name('products.show');
+    Route::get('/random', 'random')->name('products.random');
+    Route::get('/search', 'search')->name('products.search');
 });
 
 // Cart Routes

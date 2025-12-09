@@ -97,8 +97,10 @@ class ProductController extends Controller
             'description' => 'nullable|string',
             'price' => 'numeric',
             'stock_quantity' => 'integer',
-            'is_active' => 'boolean',
         ]);
+
+        // Convert the checkbox to a boolean
+        $data['is_active'] = $request->has('is_active');
 
         $product->update($data);
 
@@ -112,5 +114,35 @@ class ProductController extends Controller
     {
         $product->delete();
         return redirect()->route('admin.dashboard')->with('success', 'Product deleted successfully.');
+    }
+
+    /**
+     * Redirects the user to a random product.
+     */
+    public function random()
+    {
+        // Select a random product
+        $product = Product::inRandomOrder()->first();
+
+        if (!$product) {
+            return redirect()->route('products.shop')->with('error', 'No products available.');
+        }
+
+        // Return a view of that random product
+        return redirect()->route('products.show', $product->slug);
+    }
+
+    /**
+     * Returns a list of products searched
+     */
+    public function search(Request $request)
+    {
+        $query = $request->get('search');
+
+        // Get products where something in the name or description matches the search
+        $products = Product::where('name', 'LIKE', '%' . $query . '%')->orWhere('description', 'LIKE', '%' . $query . '%')->get();
+
+        // Return the shop view with the select products
+        return view('shop', compact('products'));
     }
 }
