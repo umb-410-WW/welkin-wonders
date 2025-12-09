@@ -8,6 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="{{ asset('assets/img/favicon_crystal.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
+    <style>
+        #mobile-toggle-custom {
+            background-image: url("{{ asset('assets/img/icon_menu_open.svg') }}")
+        }
+        #mobile-toggle:checked ~ #mobile-toggle-custom {
+            background-image: url("{{ asset('assets/img/icon_menu_close.svg') }}");
+        }
+    </style>
     @yield('style')
 </head>
 <body>

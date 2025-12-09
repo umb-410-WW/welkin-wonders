@@ -85,7 +85,7 @@
 }
 
 /* Universal Styling */
-*, 
+*,
 *::before,
 *::after {
     box-sizing: border-box;
@@ -116,18 +116,18 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-height: var(--placeholder-banner-height); 
-    overflow: hidden;                             
+    max-height: var(--placeholder-banner-height);
+    overflow: hidden;
     background-color: var(--clr-surface-tonal-a20);
     color: var(--clr-light-a0);
-    padding: 0; 
+    padding: 0;
 }
 
 .welcome-banner {
     width: 100%;
     height: auto;
-    max-height: var(--placeholder-banner-height);  
-    object-fit: cover;                            
+    max-height: var(--placeholder-banner-height);
+    object-fit: cover;
     background-color: var(--clr-surface-tonal-a10);
     display: block;
     height: var(--placeholder-banner-height);
@@ -155,7 +155,7 @@ nav {
     padding-inline: var(--nav-horizontal-padding);
     background-color: var(--clr-surface-tonal-a10);
     gap: var(--nav-min-gap);
-    
+
     width: 100%;
     box-sizing: border-box;
     left: 0;
@@ -180,8 +180,8 @@ nav {
 }
 
 .logo img {
-    height: 100%;
-    aspect-ratio: 1;
+    max-height: 50px;
+    width: auto;
 }
 
 /* Navbar Content */
@@ -229,9 +229,9 @@ nav {
 #search-form {
     display: flex;
     align-items: center;
-    padding: var(--search-bar-vertical-padding) 
-             var(--search-bar-padding-right) 
-             var(--search-bar-vertical-padding) 
+    padding: var(--search-bar-vertical-padding)
+             var(--search-bar-padding-right)
+             var(--search-bar-vertical-padding)
              var(--search-bar-padding-left);
     padding: var(--search-bar-vertical-padding)
     var(--search-bar-padding-right)
@@ -257,7 +257,7 @@ nav {
     background-color: transparent;
     color: var(--clr-light-a0);
 }
-    
+
 #search-form input[type="text"]:focus {
     outline: none;
     caret-color: var(--clr-light-a0)
@@ -296,7 +296,6 @@ nav {
     border-radius: 100%;
     z-index: 1;
     background-color: var(--clr-primary-a0);
-    background-image: url("../img/assets/icon_menu_open.svg");
     background-size: 75%;
     background-position: center;
     background-repeat: no-repeat;
@@ -311,8 +310,7 @@ nav {
         display: block;
     }
     nav {
-        /* position: relative; */
-        background-color: none;
+        position: relative;
     }
     .nav-content {
         flex-direction: column;
@@ -355,9 +353,6 @@ nav {
         min-width: 100%;
     }
 
-    #mobile-toggle:checked ~ #mobile-toggle-custom {
-        background-image: url("../img/assets/icon_menu_close.svg");
-    }
     #mobile-toggle:checked ~ .nav-content {
         top: 0;
     }
@@ -377,7 +372,7 @@ footer {
 #about {
     /* min-height: calc(100vh - var(--placeholder-nav-bar-height) - var(--placeholder-footer-height) - var(--placeholder-banner-height)); */
     /* height: var(--about-us-height); */
-    
+
     width: min(900px, 92vw);
     height: auto;
     display: grid;
