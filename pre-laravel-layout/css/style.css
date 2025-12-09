@@ -212,6 +212,10 @@ nav {
     transition: 0.5s ease;
 }
 
+.nav-mobile-reveal {
+    display: none;
+}
+
 .login-button {
   background-color: var(--clr-primary-a0);
 }
@@ -333,6 +337,9 @@ nav {
     }
     .logo-and-links {
         flex-direction: column;
+    }
+    .nav-mobile-reveal {
+        display: block;
     }
     .search-and-login {
         display: grid;
@@ -478,19 +485,20 @@ nav a.active {
 footer {
     background-color: #140728;
     color: #eee;
-    padding: 55px 0;
     width: 100%;
+    height: fit-content;
     position: relative;
 }
 
 .footer-container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
+    width: min(90vw, 1100px);
+    padding: 55px 15px;
+    margin-inline: auto;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 20px;
 }
 
@@ -534,6 +542,26 @@ footer {
     text-decoration: underline;
 }
 
-footer {
-    margin-top: auto;
+@media screen and (max-width: 1250px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    .footer-nav {
+        text-align: center;
+    }
+}
+
+
+#genie-float {
+    width: 75px;
+    height: 75px;
+    position: sticky;
+    bottom: var(--nav-horizontal-padding);
+    left: calc(100vw - var(--nav-horizontal-padding) - 75px); /* right isn't working for some reason */
+    margin-bottom: var(--nav-horizontal-padding);
+}
+
+#genie-float img {
+    width: 100%;
+    height: 100%;
 }
