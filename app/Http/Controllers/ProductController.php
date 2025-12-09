@@ -97,8 +97,10 @@ class ProductController extends Controller
             'description' => 'nullable|string',
             'price' => 'numeric',
             'stock_quantity' => 'integer',
-            'is_active' => 'boolean',
         ]);
+
+        // Convert the checkbox to a boolean
+        $data['is_active'] = $request->has('is_active');
 
         $product->update($data);
 

@@ -157,12 +157,13 @@
             <label class="ww-label" for="is_active" style="margin:0;">Active</label>
         </div>
 
-        <label for="image">Product Image</label>
-        <input type="file" name="image" id="image" accept="image/*">
+        <div class="ww-file">
+            <label for="image">Product Image</label>
+            <input type="file" name="image" id="image" accept="image/*">
+        </div>
 
         <button class="ww-submit" type="submit">Create Product</button>
     </form>
-
 </div>
 
 @endsection
