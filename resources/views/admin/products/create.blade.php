@@ -160,6 +160,7 @@
         <label for="image">Product Image</label>
         <input type="file" name="image" id="image" accept="image/*">
 
+        <button class="ww-submit" type="submit">Create Product</button>
     </form>
 
 </div>
