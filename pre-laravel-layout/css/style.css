@@ -553,8 +553,7 @@ footer {
 
 
 #genie-float {
-    width: 75px;
-    height: 75px;
+    width: fit-content;
     position: sticky;
     bottom: var(--nav-horizontal-padding);
     left: calc(100vw - var(--nav-horizontal-padding) - 75px); /* right isn't working for some reason */
@@ -562,6 +561,7 @@ footer {
 }
 
 #genie-float img {
-    width: 100%;
-    height: 100%;
+    width: 75px;
+    height: 75px;
+    aspect-ratio: 1;
 }
