@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./style.css";
+@import "./contact.css";
+@import "./shop.css";   
+@import "./cart.css";

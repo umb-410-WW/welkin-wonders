@@ -84,18 +84,21 @@ body {
 .banner {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 100vw;       /* fill the whole viewport width */
+    overflow: hidden;   /* just in case of sub-pixel overflow */
 }
 
 /* Banner image */
 .banner img,
 .welcome-banner {
-    display: block;   /* removes gap between banner and nav bar */
+    display: block;
     margin: 0;
     padding: 0;
-    /*cover means the image will cover the entire container */
-    object-fit: fill;
-} 
+    width: 100%;        /* match the banner container */
+    height: auto;       /* keep aspect ratio, no distortion */
+    max-width: none;    /* optional; not really needed with width:100% */
+    object-fit: contain; /* or remove this line entirely */
+}
 
 /* Navigation Bar Styling */
 nav {
