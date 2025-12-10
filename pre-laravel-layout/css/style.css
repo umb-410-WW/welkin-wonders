@@ -36,7 +36,7 @@
     /* Footer Variables */
     --placeholder-footer-height: 30px; /*you could change to vp instead of px */
 
-    /** Base colors */
+    /** Colors */
     --clr-light-a0: #ffffff;
     --clr-primary-a0: #915cfa;
     --clr-primary-a10: #a06efb;
@@ -75,23 +75,27 @@ body {
     margin: 0;
     font-size: 16px;
     background-color: var(--clr-surface-tonal-a0);
-    min-width: min-content;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+
+}
+/* Banner container */
+.banner {
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
-/* Banner Styling */
-/* Banner Styling */
-.banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    overflow: hidden;                             
-    padding: 0; 
-}
+/* Banner image */
+.banner img,
 .welcome-banner {
-    min-width: 100vh;
-    min-height: 70vh;
-}
+    display: block;   /* removes gap between banner and nav bar */
+    margin: 0;
+    padding: 0;
+    /*cover means the image will cover the entire container */
+    object-fit: fill;
+} 
 
 /* Navigation Bar Styling */
 nav {
@@ -314,7 +318,7 @@ nav {
     }
 
     #mobile-toggle:checked ~ #mobile-toggle-custom {
-        background-image: url("../img/assets/icon_menu_close.svg");
+        background-image: url("img/assets/icon_menu_close.svg");
     }
     #mobile-toggle:checked ~ .nav-content {
         top: 0;
@@ -502,23 +506,23 @@ footer {
     }
 }
 
-
+/* Genie Float Box for Icon */
 #genie-float {
-    width: 75px;
-    height: 75px;
-    position: sticky;
+    /* Increased size */
+    width: 200px;
+    height: 200px;
+    /* Changing from sticky -> fixed makes genie scrolling more smooth - Thea */
+    position: fixed; 
+    /* Bottom right corner */
     bottom: var(--nav-horizontal-padding);
-    left: calc(100vw - var(--nav-horizontal-padding) - 75px); /* right isn't working for some reason */
-    margin-bottom: var(--nav-horizontal-padding);
+    /* Right of the nav bar */
+    right: var(--nav-horizontal-padding);
+    /* Stay above the nav bar */
+    z-index: calc(var(--nav-z-index) + 1);
 }
-
+/* Actual genie img */
 #genie-float img {
-<<<<<<< HEAD
-    width: 75px;
-    height: 75px;
+    width: 200px;
+    height: 200px;
     aspect-ratio: 1;
-=======
-    width: 100%;
-    height: 100%;
->>>>>>> thea
 }
