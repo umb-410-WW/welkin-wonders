@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CheckoutController;
+
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -60,4 +62,14 @@ Route::controller(ProductController::class)->group(function () {
     // Routes available to all users
     Route::get('/shop', 'index')->name('products.shop');
     Route::get('/products/{product:slug}', 'show')->name('products.show');
+
+
+    //temp checkout page 
+    Route::post('/create-checkout', [CheckoutController::class, 'createCheckout'])->name('checkout.create');
+
+    Route::post('/checkout/{product}', [CheckoutController::class, 'createCheckout'])->name('checkout.create');
+
+    Route::get('/checkout/success', [CheckoutController::class, 'success'])->name('checkout.success');
+    Route::get('/checkout/cancel', [CheckoutController::class, 'cancel'])->name('checkout.cancel');
+
 });

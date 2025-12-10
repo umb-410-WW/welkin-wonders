@@ -3,7 +3,7 @@
         "laravel-boost": {
             "command": "C:\\php\\php.exe",
             "args": [
-                "C:\\xampp\\htdocs\\WelkinWonders\\artisan",
+                "C:\\Users\\Naim\\Documents\\GitHub\\welkin-wonders\\artisan",
                 "boost:mcp"
             ]
         }
