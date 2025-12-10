@@ -1,10 +1,10 @@
 /* Constants */
 :root {
     /* Banner Variables */
-    --placeholder-banner-height: 80vh;
+    /*--placeholder-banner-height: 80vh;
     --banner-border-radius: 50px;
     --welcome-banner-width: 100%;
-
+        */
     /* Navigation Bar Variables */
     --placeholder-nav-bar-height: 100px;
     --nav-z-index: 1000;
@@ -32,56 +32,25 @@
 
     /* About Us Variables */
     --about-us-height: 1000px;
+
     /* Footer Variables */
-    --placeholder-footer-height: 30px;
+    --placeholder-footer-height: 30px; /*you could change to vp instead of px */
 
     /** Base colors */
-    --clr-dark-a0: #000000;
     --clr-light-a0: #ffffff;
-
-    /** Theme primary colors */
     --clr-primary-a0: #915cfa;
     --clr-primary-a10: #a06efb;
     --clr-primary-a20: #ae80fc;
     --clr-primary-a30: #bb92fd;
     --clr-primary-a40: #c7a4fe;
     --clr-primary-a50: #d3b6ff;
-
-    /** Theme surface colors */
-    --clr-surface-a0: #121212;
     --clr-surface-a10: #282828;
-    --clr-surface-a20: #3f3f3f;
     --clr-surface-a30: #575757;
-    --clr-surface-a40: #717171;
     --clr-surface-a50: #8b8b8b;
-
-    /** Theme tonal surface colors */
     --clr-surface-tonal-a0: #1f1a25;
     --clr-surface-tonal-a10: #342f39;
     --clr-surface-tonal-a20: #4a454f;
     --clr-surface-tonal-a30: #615d66;
-    --clr-surface-tonal-a40: #7a767e;
-    --clr-surface-tonal-a50: #939096;
-
-    /** Success colors */
-    --clr-success-a0: #22946e;
-    --clr-success-a10: #47d5a6;
-    --clr-success-a20: #9ae8ce;
-
-    /** Warning colors */
-    --clr-warning-a0: #a87a2a;
-    --clr-warning-a10: #d7ac61;
-    --clr-warning-a20: #ecd7b2;
-
-    /** Danger colors */
-    --clr-danger-a0: #9c2121;
-    --clr-danger-a10: #d94a4a;
-    --clr-danger-a20: #eb9e9e;
-
-    /** Info colors */
-    --clr-info-a0: #21498a;
-    --clr-info-a10: #4077d1;
-    --clr-info-a20: #92b2e5;
 }
 
 /* Universal Styling */
@@ -122,31 +91,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    max-height: var(--placeholder-banner-height); 
+    width: 100vw;
     overflow: hidden;                             
-    background-color: var(--clr-surface-tonal-a20);
-    color: var(--clr-light-a0);
     padding: 0; 
 }
-
 .welcome-banner {
-    width: 100%;
-    height: auto;
-    max-height: var(--placeholder-banner-height);  
-    object-fit: cover;                            
-    background-color: var(--clr-surface-tonal-a10);
-    display: block;
-    height: var(--placeholder-banner-height);
-    background-color: var(--clr-surface-tonal-a20);
-    color: var(--clr-light-a0);
-}
-
-.welcome-banner {
-    background-color: var(--clr-surface-tonal-a10);
-    height: auto;
-    max-width: 2000px;
-    max-height: 800px;
+    min-width: 100vh;
+    min-height: 70vh;
 }
 
 /* Navigation Bar Styling */
