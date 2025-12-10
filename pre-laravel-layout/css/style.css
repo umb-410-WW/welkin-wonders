@@ -553,7 +553,8 @@ footer {
 
 
 #genie-float {
-    width: fit-content;
+    width: 75px;
+    height: 75px;
     position: sticky;
     bottom: var(--nav-horizontal-padding);
     left: calc(100vw - var(--nav-horizontal-padding) - 75px); /* right isn't working for some reason */
