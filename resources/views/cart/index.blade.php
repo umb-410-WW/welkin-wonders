@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/cart.css') }}">
 @endsection
 @section('content')
-    <section id="cart-strip">
+    <section id="cart-strip" style="min-height: 600px;">
         <div id="cart-header">
             <h1>Cart</h1>
             <a>Checkout: $ {{ $total }}</a>
@@ -34,4 +34,27 @@
             @endforeach
         </div>
     </section>
+
+    <!-- Footer Area -->
+    <footer>
+        <div class="footer-container">
+
+            <!-- Footer Navigation -->
+            <ul class="footer-nav">
+                <li><a href="{{ route('about')}}">Home</a></li>
+                <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                <li><a href="{{ route('readings') }}">Readings</a></li>
+                <li><a href="{{ route('products.shop') }}">Shop</a></li>
+            </ul>
+
+            <!-- Footer Info -->
+            <div class="footer-info">
+                <p>© 2025 Welkin Wonders. All rights reserved.</p>
+            </div>
+
+            @guest
+                <a class="admin-link" href="{{ route('login') }}">Admin Sign In</a>
+            @endguest
+        </div>
+    </footer>
 @endsection
