@@ -1,11 +1,10 @@
 # WELKIN WONDERS PRODUCT BACKLOG
 
 ## 1. Homepage
-- [ ] About Us Section – Backstory, Mottos (1.2)
-- [ ] Description of Shop (1.3)
+- [x] About Us Section – Backstory, Mottos (1.2)
+- [x] Description of Shop (1.3)
 - [ ] Include buttons to other pages within homepage content section (1.4)
-- [ ] Contact Genie (1.5)
-- [ ] Curtain Animation (1.6)
+- [x] Contact Genie (1.5)
 - [x] Homepage Banner (1.1)
 
 ---
@@ -17,7 +16,7 @@
 
 ## 3. Navigation Bar
 - [x] Navigation Bar Frontend Design (3.1)
-- [ ] Search Bar for Products (3.2)
+- [x] Search Bar for Products (3.2)
 
 ---
 
@@ -28,22 +27,22 @@
 
 ## 5. Shop Page
 - [x] Product Card Frontend Template (5.1.1)
-- [ ] Product Cards Backend Integration (5.1.2)
-- [ ] Randomizer Button to Choose Crystal for Customer (5.2)
+- [x] Product Cards Backend Integration (5.1.2)
+- [x] Randomizer Button to Choose Crystal for Customer (5.2)
 
 ---
 
 ## 6. Individual Product Page
 - [x] Generic Product Page Frontend Template (6.1)
 - [x] Review Section to Display Customer Ratings (6.2)
-- [ ] Review Form Underneath Review Section (6.3)
-- [ ] Integration with Laravel Backend to Display Database Products (6.4)
+- [ ] Review Form Underneath Review Section (6.3) -> Not enough time to complete
+- [x] Integration with Laravel Backend to Display Database Products (6.4)
 
 ---
 
 ## 7. Shopping Cart / Checkout Page
-- [ ] Frontend for Checkout Page (7.1)
-- [ ] Add Product Price for Total (7.2)
+- [x] Frontend for Checkout Page (7.1)
+- [x] Add Product Price for Total (7.2)
 - [ ] Laravel Embedded Payment System (Stripe) (7.3)
 
 ---
@@ -55,8 +54,8 @@
 
 ## 9. Admin Page
 - [x] Admin Page Frontend (9.1)
-- [ ] Admin Page Sales Tracker (9.2)
-- [ ] Add/Edit/Remove Product Functionality (9.3)
+- [ ] Admin Page Sales Tracker (9.2) -> Not enough time to complete
+- [x] Add/Edit/Remove Product Functionality (9.3)
 
 ---
 
@@ -68,16 +67,17 @@
 
 ## 11. Database (MySQL)
 - [x] Users Table (11.1)
-- [ ] Products Table (11.2)
-- [ ] Carts Table (11.3)
-- [ ] Orders Table (11.4)
-- [ ] Other Tables as Needed (11.5)
+- [x] Products Table (11.2)
+- [x] Carts Table (11.3)
+- [ ] Orders Table (11.4) -> Not enough time to complete
+- [x] Other Tables as Needed (11.5)
 
 ---
 
 ## 12. Website Deployment
 - [x] Communication with Tom Regarding CS Server (12.1)
-- [ ] Discuss with Sachi Regarding Preferred Hosting Platform (12.2)
+- [x] Discuss with Sachi Regarding Preferred Hosting Platform (12.2)
+- [x] DigitalOcean hosting
 
 ---
 
