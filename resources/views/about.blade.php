@@ -25,7 +25,7 @@
     </section>
 
     <div id="genie-float">
-        <img src="{{ asset('assets/img/genie_3.png') }}" alt="Floating Genie" width="500" height="500" />
+        <a href="{{ route('contact') }}"><img src="{{ asset('assets/img/genie_3.png') }}" alt="Floating Genie" width="500" height="500" /></a>
     </div>
 
     <!-- Footer Area -->
