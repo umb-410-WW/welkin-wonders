@@ -9,7 +9,7 @@
     }
 
     .ww-container {
-        width: 420px;
+        width: 750px;
         margin: 70px auto;
         background: rgba(20, 17, 31, 0.65);
         padding: 40px 35px;

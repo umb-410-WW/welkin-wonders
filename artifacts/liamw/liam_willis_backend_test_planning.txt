@@ -1,0 +1,37 @@
+~~~~ LIAM WILLIS TEST PLAN FOR BACKEND FEATURES ~~~~
+
+~~~~ General Routing ~~~~
+- Test that only Admin users have access to the Admin Dashboard on the Navigation bar [x]
+- Test that guests only see the Login and Register buttons on the Navigation bar [x]
+- Test that logged in customers see the Logout and Cart buttons [x]
+
+~~~~ Products: ~~~~
+- Test that products can be added/edited/deleted by Administrators [x]
+- Test that customers do NOT have access to these commands [x]
+- Test routing details [x]
+  - Crystal Ball button on Admin Page should bring up the Create Product Form [x]
+  - Edit Button on a product card should bring up the Edit Product form [x]
+  - Delete button should prompt the Admin for confirmation, then delete the product from the database [x]
+- Test that newly created products appear on the Shop page [x]
+- Test that Product Pages are generated for each product after creation [x]
+
+These Product Tests can be found in the tests/Feature folder.
+
+~~~~ Cart Logic Functionality: ~~~~
+- Test that ONLY logged-in users have access to the cart page (corner case) [x]
+- Test that the Add to Cart button adds the button to the given user's cart table [x]
+- Test that pressing the Add to Cart button multiple times simply increases the quantity in the cart [x]
+- Test that adding products to cart when the amount in stock is insufficient is not allowed (corner case) [x]
+- Test that, on the cart page, that the total displayed on the checkout button is accurate [x]
+- Test that non-integer quantity updates are disallowed [x]
+
+~~~~ Search Bar Functionality: ~~~~
+- Test that any keyword matches with product names will bring up relevant products [x]
+- Display a default message if no products were found (corner case) [x]
+
+~~~~ Randomizer Button: ~~~~
+- Test that the randomizer button will bring up some random product page [x]
+- Test that the randomizer button will do nothing if no products are in the database (corner case) [x]
+
+~~~~ Digital Ocean Deployment: ~~~~
+- Test that updates made to the main Welkin-Wonders branch are reflected on the DigitalOcean-deployed app [x]

@@ -19,8 +19,10 @@
         {{-- Display all of the product cards --}}
         <div id="products">
             @forelse ($products as $product)
-                <x-ww_components.product-card :product="$product"></x-ww_components.product-card>
-                {{-- Display a message if there are no products in the database --}}
+                @if ($product->is_active)
+                    <x-ww_components.product-card :product="$product"></x-ww_components.product-card>
+                    {{-- Display a message if there are no products in the database --}}
+                @endif
             @empty
                 <p>We could not find any products for you. Stay tuned!</p>
             @endforelse

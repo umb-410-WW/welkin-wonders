@@ -12,7 +12,7 @@
 
     .ww-container {
         width: 90%;
-        max-width: 750px; /* makes it wider */
+        max-width: 750px;
         margin: 70px auto;
         background: rgba(20, 17, 31, 0.65);
         padding: 40px 40px;
