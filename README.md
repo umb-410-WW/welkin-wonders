@@ -40,7 +40,6 @@ It is a metaphysical-themed online store.
 - Added search feature, allowing customers to search for a product based on keywords
 - Added randomizer button backend, allowing customers to press a button and be brought to a random product page
 - Transitioned most HTML/CSS files into Laravel-compatible formats
-- 
 
 ### Naim
 - Developed the About Us page, later merged into the homepage per client feedback.  
