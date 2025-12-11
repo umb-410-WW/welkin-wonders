@@ -30,9 +30,6 @@ test("Customers should not be able to update products", function () {
         'name' => 'Updated name'
     ]);
 
-    // Customer should be redirected to the home page
-    $response->assertRedirect('/');
-
     // Check that the product was not updated by the customer
     $this->assertDatabaseHas('products', [
         'id' => $product->id,

@@ -2,7 +2,12 @@
 @extends('layouts.ww_layouts.app')
 @section('title', $product->name)
 @section('style')
-    <link rel="stylesheet" href="{{ asset('assets/css/product-page.css') }}"
+    <link rel="stylesheet" href="{{ asset('assets/css/product-page.css') }}">
+    <style>
+        .product-cart {
+            background-image: url({{ asset('assets/img/icon_cart.svg') }});
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -17,11 +22,14 @@
             <div>
                 <div id="product-title">
                     <h1>{{ $product->name }}</h1>
-                    <p>{{ $product->price }}</p>
+                    <p>$ {{ $product->price }}</p>
                 </div>
-                <div id="product-cart">
-                    <p>Shopping Cart</p>
-                </div>
+                <form action="{{ route('cart.add', $product->id) }}" method="POST">
+                    @csrf
+                    <button type="submit">
+                        Add to Cart
+                    </button>
+                </form>
             </div>
         </section>
         <p id="product-desc">{{ $product->description }}</p>

@@ -7,7 +7,7 @@
     <section id="cart-strip">
         <div id="cart-header">
             <h1>Cart</h1>
-            <a>Checkout > $ {{ $total }}  (Total Price)</a>
+            <a>Checkout: $ {{ $total }}</a>
         </div>
         <div id="cart-items">
             @foreach ($cart->items as $item)

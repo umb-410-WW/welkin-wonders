@@ -2,9 +2,9 @@
 @props(['product'])
 <div class="product-card">
     @if ($product->image)
-        <img id="product-img" alt="Product Image" src="{{ asset('storage/' . $product->image->image_path) }}">
+        <img class="product-img" alt="Product Image" src="{{ asset('storage/' . $product->image->image_path) }}">
     @else
-        <img id="product-img" alt="Product Image" src="">
+        <img class="product-img" alt="Product Image" src="">
     @endif
     <div class="product-desc">
         <div class="product-title">
@@ -13,12 +13,5 @@
         </div>
         <p>{{ $product->description }}</p>
         <a href="{{ route('products.show', $product->slug) }}">Product Page</a>
-        {{-- Add to cart button --}}
-        <form action="{{ route('cart.add', $product->id) }}" method="POST">
-            @csrf
-            <button type="submit">
-                Add to Cart
-            </button>
-        </form>
     </div>
 </div>

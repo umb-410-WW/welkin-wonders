@@ -21,7 +21,7 @@ test("Customers should not be able to create/store products", function () {
         'description' => 'test product description',
         'price' => 5.99,
         'stock_quantity' => 3,
-        'is_active' => false
+        'is_active' => 1
     ]);
 
     // Customer should be redirected to the home page
@@ -49,7 +49,7 @@ test("Administrators should be able to create products", function () {
         'description' => 'test product description',
         'price' => 5.99,
         'stock_quantity' => 3,
-        'is_active' => false
+        'is_active' => true
     ]);
 
     // Admin should be redirected back to admin dashboard
@@ -62,7 +62,7 @@ test("Administrators should be able to create products", function () {
         'description' => 'test product description',
         'price' => 5.99,
         'stock_quantity' => 3,
-        'is_active' => false
+        'is_active' => true
     ]);
 });
 

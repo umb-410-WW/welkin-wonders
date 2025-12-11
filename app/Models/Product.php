@@ -22,4 +22,10 @@ class Product extends Model
     {
         return $this->hasOne(ProductImage::class);
     }
+
+    // Establish a one-to-many relationship between Reviews and products
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }
