@@ -1,4 +1,6 @@
-{{-- This file will display each individual product --}}
+{{-- Name: Liam Willis --}}
+{{-- This file displays a page for a specific product --}}
+
 @extends('layouts.ww_layouts.app')
 @section('title', $product->name)
 @section('style')

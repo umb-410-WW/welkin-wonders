@@ -1,5 +1,8 @@
 <?php
 
+// Name: Liam Willis
+// This file serves to help routing (i.e. navigating from page to page) throughout WelkinWonders
+
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;

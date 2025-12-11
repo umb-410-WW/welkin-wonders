@@ -1,3 +1,6 @@
+{{-- Name: Liam Wllis --}}
+{{-- This page displays the Readings form for customers --}}
+
 @extends('layouts.ww_layouts.app')
 @section('title', 'Readings')
 @section('style')

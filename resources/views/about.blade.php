@@ -1,3 +1,6 @@
+{{-- Name: Liam Wllis --}}
+{{-- This page displays the About Us page for the website --}}
+
 @extends('layouts.ww_layouts.app')
 @section('title', 'About Us')
 @section('banner')

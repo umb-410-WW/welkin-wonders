@@ -1,0 +1,40 @@
+~~~~ LIAM WILLIS: FILES THAT I CODED ~~~~
+
+General Routing (i.e. controls and navigation definitions throughout the website):
+- routes/web.php
+
+Web Page Files (i.e. files which display the front end of the website but interact with the backend):
+- resources/views/about.blade.php
+- resources/views/contact.blade.php
+- resources/views/readings.blade.php
+- resources/views/shop.blade.php
+- resources/views/products/show.blade.php
+- resources/views/layouts/ww_layouts/app.blade.php
+- resources/views/components/ww_components/admin-product-card.blade.php
+- resources/views/components/ww_components/navigation.blade.php
+- resources/views/components/ww_components/product-card.blade.php
+- resources/views/components/cart/index.blade.php
+- resources/views/admin/index.blade.php (ONLY the section in the <div id="products"></div> area)
+- resources/views/admin/products/create.blade.php (ONLY the basic form structure; none of the styling)
+- resources/views/admin/products/edit.blade.php (ONLY the basic form structure; none of the styling)
+
+Controller Files (Functions that handle database queries and other functions):
+- app/Http/Controllers/CartController.php
+- app/Http/Controllers/HomeController.php
+- app/Http/Controllers/ProductController.php
+- app/Http/Controllers/ReviewController.php (just the start)
+
+Middleware (this helps prevent customers from executing Administrator commands):
+- app/Http/Middleware/Admin.php
+
+Model Files (these files establish relationships between table entities in the database, e.g. one-to-one relationship between Customers and Carts)
+- app/Models/Cart.php
+- app/Models/CartItem.php
+- app/Models/Product.php
+- app/Models/ProductImage.php
+- app/Models/Review.php (just the start)
+
+Migrations Folders (these files are responsible for defining the structure of each table in the database)
+- EVERYTHING in database/migrations/* 
+
+

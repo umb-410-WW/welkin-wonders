@@ -1,3 +1,6 @@
+{{-- Name: Liam Wllis --}}
+{{-- This page displays products for customers to see on the shop page --}}
+
 @extends('layouts.ww_layouts.app')
 @section('title', 'Shop')
 @section('style')

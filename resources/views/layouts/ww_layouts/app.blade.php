@@ -1,3 +1,6 @@
+{{-- Name: Liam Willis --}}
+{{-- This file defines the structure of every web page of WelkinWonders: it serves as a template --}}
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
