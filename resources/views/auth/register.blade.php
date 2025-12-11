@@ -11,7 +11,7 @@
 <body class="min-h-screen w-full bg-[#0d0718] text-white overflow-x-hidden">
 
     <!-- FULL SCREEN REGISTER FORM -->
-    <div class="flex justify-center items-center min-h-[85vh] px-4">
+    <div style="padding-top: 30px" class="flex justify-center items-center min-h-[85vh] px-4">
 
         <div class="w-full max-w-md bg-[#1a1329] border border-[#2e2350]
                     rounded-2xl shadow-2xl p-10">
