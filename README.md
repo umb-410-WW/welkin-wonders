@@ -33,7 +33,14 @@ It is a metaphysical-themed online store.
 - Created the first homepage layout and integrated the site banner.  
 - Resolved banner-width and alignment issues across viewports.  
 - Developed User and Product database strucure and led transition/instructions for Laravel framework 
-- Began user authentication setup and backend routing for the Laravel transition.
+- Set up user authentication and admin login
+- Set up backend for product management, including Creating, Updating, and Deleting Products
+- Set up backend for cart management, allowing customers to add or remove products from their cart
+      - Cart page also displays total price (before additional fees)
+- Added search feature, allowing customers to search for a product based on keywords
+- Added randomizer button backend, allowing customers to press a button and be brought to a random product page
+- Transitioned most HTML/CSS files into Laravel-compatible formats
+- 
 
 ### Naim
 - Developed the About Us page, later merged into the homepage per client feedback.  
