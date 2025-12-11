@@ -117,6 +117,7 @@ class ProductController extends Controller
 
             // Associate the new image with the given product
             $product->image()->updateOrCreate(
+                ['product_id' => $product->id],
                 ['image_path' => $path]
             );
         }

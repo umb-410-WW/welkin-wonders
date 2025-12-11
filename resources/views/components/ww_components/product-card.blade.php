@@ -13,12 +13,5 @@
         </div>
         <p>{{ $product->description }}</p>
         <a href="{{ route('products.show', $product->slug) }}">Product Page</a>
-        {{-- Add to cart button --}}
-        <form action="{{ route('cart.add', $product->id) }}" method="POST">
-            @csrf
-            <button type="submit">
-                Add to Cart
-            </button>
-        </form>
     </div>
 </div>
