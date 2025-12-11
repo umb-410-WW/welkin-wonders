@@ -157,25 +157,10 @@
             <label class="ww-label" for="is_active" style="margin:0;">Active</label>
         </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <div class="ww-group">
-            <label class="ww-label" for="images">Product Images</label>
-            <input type="file" id="images" name="images[]" class="ww-file" multiple>
-        </div>
-
-        <button type="submit" class="ww-submit">Create Product</button>
-=======
->>>>>>> thea
         <div class="ww-file">
             <label for="image">Product Image</label>
             <input type="file" name="image" id="image" accept="image/*">
         </div>
-<<<<<<< HEAD
-=======
->>>>>>> 0029b153 (Fix errors with Edit Product form)
->>>>>>> thea
 
         <button class="ww-submit" type="submit">Create Product</button>
     </form>

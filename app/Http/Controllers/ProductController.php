@@ -6,6 +6,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -103,6 +104,22 @@ class ProductController extends Controller
         $data['is_active'] = $request->has('is_active');
 
         $product->update($data);
+
+        // Check whether the image for the product has changed
+        if ($request->hasFile('image')) {
+            // Delete the old image, if it exists
+            if ($product->image) {
+                Storage::disk('public')->delete($product->image->image_path);
+            }
+
+            // Store the new image
+            $path = $request->file('image')->store('products', 'public');
+
+            // Associate the new image with the given product
+            $product->image()->updateOrCreate(
+                ['image_path' => $path]
+            );
+        }
 
         return redirect()->route('admin.dashboard')->with('success', 'Product updated successfully.');
     }

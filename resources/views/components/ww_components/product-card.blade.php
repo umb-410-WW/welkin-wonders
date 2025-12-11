@@ -2,9 +2,9 @@
 @props(['product'])
 <div class="product-card">
     @if ($product->image)
-        <img id="product-img" alt="Product Image" src="{{ asset('storage/' . $product->image->image_path) }}">
+        <img class="product-img" alt="Product Image" src="{{ asset('storage/' . $product->image->image_path) }}">
     @else
-        <img id="product-img" alt="Product Image" src="">
+        <img class="product-img" alt="Product Image" src="">
     @endif
     <div class="product-desc">
         <div class="product-title">
