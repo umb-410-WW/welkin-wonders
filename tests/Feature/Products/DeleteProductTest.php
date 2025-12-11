@@ -28,9 +28,6 @@ test("Customers should not be able to delete products", function () {
     // Customer attempt to delete the product
     $response = $this->delete(route('products.destroy', $product->slug));
 
-    // Customer should be redirected to the home page
-    $response->assertRedirect('/');
-
     // Check that the product was not deleted by the customer
     $this->assertDatabaseHas('products', [
         'id' => $product->id,

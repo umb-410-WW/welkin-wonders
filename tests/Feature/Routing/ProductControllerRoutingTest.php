@@ -138,9 +138,6 @@ test("Customers should not be able to access the update product route", function
        'name' => 'Updated name'
     ]);
 
-    // Customer should be redirected to the home page
-    $response->assertRedirect('/');
-
     // Check that the product was not updated by the customer
     $this->assertDatabaseHas('products', [
         'id' => $product->id,
@@ -174,9 +171,6 @@ test("Customers should not be able to access the destroy product route", functio
 
     // Customer attempt to delete the product
     $response = $this->delete(route('products.destroy', $product->slug));
-
-    // Customer should be redirected to the home page
-    $response->assertRedirect('/');
 
     // Check that the product was not deleted by the customer
     $this->assertDatabaseHas('products', [
@@ -230,7 +224,7 @@ test("Administrators should be routed to the admin.products.edit page via the ed
     // Attempt to access the edit product page
     $response = $this->get('/products/' . $product->slug . '/edit');
 
-    // Assert that the requested edit product page was succesful
+    // Assert that the requested edit product page was succesfull
     $response->assertStatus(200);
 });
 

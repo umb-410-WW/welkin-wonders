@@ -52,4 +52,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(Cart::class);
     }
+
+    // Establish a one-to-many relationship between reviews and users
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }

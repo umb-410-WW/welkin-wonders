@@ -23,7 +23,4 @@
     </section>
 @endsection
 
-@php
-    $user = Auth::user();
-@endphp
 
